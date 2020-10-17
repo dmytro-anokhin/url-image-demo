@@ -16,16 +16,13 @@ struct ListDemoView: View {
     var body: some View {
         List(urls, id: \.self) { url in
             VStack(alignment: .leading) {
-                URLImage(url: url,
-                         failure: { error, _ in
-                            Text(error.localizedDescription)
-                         },
-                         content: {
-                            $0
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                         })
-                    .frame(width: 200.0, height: 200.0)
+                URLImage(url: url) {
+                    $0
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
+                    .frame(width: 320.0, height: 200.0)
+                    .clipped()
                 Text(url.absoluteString)
             }
         }
