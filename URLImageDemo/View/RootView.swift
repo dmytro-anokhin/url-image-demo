@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RootView: View {
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ListDemoView(urls: SampleURLs.sample50)
+        }
     }
 }
 
