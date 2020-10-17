@@ -11,7 +11,18 @@ struct RootView: View {
 
     var body: some View {
         NavigationView {
-            ListDemoView(urls: SampleURLs.sample50)
+            Form {
+                Section(header: Text("Collections")) {
+                    NavigationLink(destination: ListDemoView(urls: SampleURLs.sample50)) {
+                        Text("List")
+                    }
+                    if #available(iOS 14.0, *) {
+                        NavigationLink(destination: ScrollableLazyVStackDemoView(urls: SampleURLs.sample50)) {
+                            Text("Scrollable LazyVStack")
+                        }
+                    }
+                }
+            }
         }
     }
 }
