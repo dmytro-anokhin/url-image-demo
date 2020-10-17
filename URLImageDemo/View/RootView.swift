@@ -39,7 +39,7 @@ struct RootView: View {
                     }
                     if #available(iOS 14.0, *) {
                         NavigationLink(destination: LazyVGridDemoView(urls: sample.urls)
-                                                        .navigationBarTitle("LazyVGridDemoView")) {
+                                                        .navigationBarTitle("LazyVGrid")) {
                             Text("LazyVGridDemoView")
                         }
                     }
