@@ -13,6 +13,7 @@
 		F482340B253AAF5600CD9ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340A253AAF5600CD9ACC /* Assets.xcassets */; };
 		F482340E253AAF5600CD9ACC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */; };
 		F4823411253AAF5600CD9ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F482340F253AAF5600CD9ACC /* LaunchScreen.storyboard */; };
+		F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B5D253AB41E0053E91B /* SampleURLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4823410253AAF5600CD9ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4823412253AAF5600CD9ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B98B5D253AB41E0053E91B /* SampleURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleURLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F4823403253AAF5500CD9ACC /* URLImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F4B98B5C253AB4120053E91B /* Common */,
 				F4B98B58253AB2E70053E91B /* View */,
 				F4823404253AAF5500CD9ACC /* AppDelegate.swift */,
 				F4823406253AAF5500CD9ACC /* SceneDelegate.swift */,
@@ -81,6 +84,14 @@
 				F4823408253AAF5500CD9ACC /* RootView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4B98B5C253AB4120053E91B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4B98B5D253AB41E0053E91B /* SampleURLs.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 				F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */,
 				F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */,
 				F4823409253AAF5500CD9ACC /* RootView.swift in Sources */,
+				F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
