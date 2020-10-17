@@ -17,20 +17,22 @@ struct RootView: View {
             Form {
                 Section(header: Text("Settings")) {
                     Picker("Sample", selection: $sample) {
-                        Text("50 x 500px").tag(SampleURLs.midRes50)
-                        Text("50 x 1000px").tag(SampleURLs.highRes50)
-                        Text("50 x 2500px").tag(SampleURLs.higherRes50)
+                        Text("50 images, 500px").tag(SampleURLs.midRes50)
+                        Text("50 images, 1000px").tag(SampleURLs.highRes50)
+                        Text("50 images, 2500px").tag(SampleURLs.higherRes50)
                     }
                     Button("Remove Cached Images") {
                         URLImageService.shared.removeAllCachedImages()
                     }
                 }
                 Section(header: Text("Collections")) {
-                    NavigationLink(destination: ListDemoView(urls: sample.urls)) {
+                    NavigationLink(destination: ListDemoView(urls: sample.urls)
+                                                    .navigationBarTitle("List")) {
                         Text("List")
                     }
                     if #available(iOS 14.0, *) {
-                        NavigationLink(destination: ScrollableLazyVStackDemoView(urls: sample.urls)) {
+                        NavigationLink(destination: ScrollableLazyVStackDemoView(urls: sample.urls)
+                                                        .navigationBarTitle("LazyVStack")) {
                             Text("Scrollable LazyVStack")
                         }
                     }
