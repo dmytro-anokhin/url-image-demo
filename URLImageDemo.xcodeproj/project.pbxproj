@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		F482340E253AAF5600CD9ACC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */; };
 		F4823411253AAF5600CD9ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F482340F253AAF5600CD9ACC /* LaunchScreen.storyboard */; };
 		F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B5D253AB41E0053E91B /* SampleURLs.swift */; };
+		F4B98B63253AB47C0053E91B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4B98B62253AB47C0053E91B /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B98B63253AB47C0053E91B /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +112,9 @@
 			dependencies = (
 			);
 			name = URLImageDemo;
+			packageProductDependencies = (
+				F4B98B62253AB47C0053E91B /* URLImage */,
+			);
 			productName = URLImageDemo;
 			productReference = F4823401253AAF5500CD9ACC /* URLImageDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +142,9 @@
 				Base,
 			);
 			mainGroup = F48233F8253AAF5500CD9ACC;
+			packageReferences = (
+				F4B98B61253AB47C0053E91B /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = F4823402253AAF5500CD9ACC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4B98B61253AB47C0053E91B /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:dmytro-anokhin/url-image.git";
+			requirement = {
+				branch = version_2;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4B98B62253AB47C0053E91B /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4B98B61253AB47C0053E91B /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F48233F9253AAF5500CD9ACC /* Project object */;
 }
