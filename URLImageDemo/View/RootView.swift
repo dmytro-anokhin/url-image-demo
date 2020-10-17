@@ -31,9 +31,9 @@ struct RootView: View {
                         Text("List")
                     }
                     if #available(iOS 14.0, *) {
-                        NavigationLink(destination: ScrollableLazyVStackDemoView(urls: sample.urls)
+                        NavigationLink(destination: LazyVStackDemoView(urls: sample.urls)
                                                         .navigationBarTitle("LazyVStack")) {
-                            Text("Scrollable LazyVStack")
+                            Text("LazyVStack")
                         }
                     }
                     if #available(iOS 14.0, *) {

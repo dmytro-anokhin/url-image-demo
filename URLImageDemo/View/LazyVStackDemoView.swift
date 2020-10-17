@@ -1,5 +1,5 @@
 //
-//  ScrollableLazyVStackDemoView.swift
+//  LazyVStackDemoView.swift
 //  URLImageDemo
 //
 //  Created by Dmytro Anokhin on 17/10/2020.
@@ -9,7 +9,7 @@ import SwiftUI
 import URLImage
 
 @available(iOS 14.0, *)
-struct ScrollableLazyVStackDemoView: View {
+struct LazyVStackDemoView: View {
 
     let urls: [URL]
 
@@ -36,6 +36,6 @@ struct ScrollableLazyVStackDemoView: View {
 @available(iOS 14.0, *)
 struct ScrollableLazyVStackDemoView_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollableLazyVStackDemoView(urls: SampleURLs.midRes50.urls)
+        LazyVStackDemoView(urls: SampleURLs.midRes50.urls)
     }
 }

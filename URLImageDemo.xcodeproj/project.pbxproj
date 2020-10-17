@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F44BEDA9253B0519008D8524 /* ScrollableLazyVStackDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDA8253B0519008D8524 /* ScrollableLazyVStackDemoView.swift */; };
+		F44BEDA9253B0519008D8524 /* LazyVStackDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDA8253B0519008D8524 /* LazyVStackDemoView.swift */; };
 		F44BEDB2253B81ED008D8524 /* LazyVGridDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */; };
 		F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823404253AAF5500CD9ACC /* AppDelegate.swift */; };
 		F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823406253AAF5500CD9ACC /* SceneDelegate.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F44BEDA8253B0519008D8524 /* ScrollableLazyVStackDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableLazyVStackDemoView.swift; sourceTree = "<group>"; };
+		F44BEDA8253B0519008D8524 /* LazyVStackDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackDemoView.swift; sourceTree = "<group>"; };
 		F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridDemoView.swift; sourceTree = "<group>"; };
 		F4823401253AAF5500CD9ACC /* URLImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4823404253AAF5500CD9ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			children = (
 				F4823408253AAF5500CD9ACC /* RootView.swift */,
 				F4B98B69253AB4D60053E91B /* ListDemoView.swift */,
-				F44BEDA8253B0519008D8524 /* ScrollableLazyVStackDemoView.swift */,
+				F44BEDA8253B0519008D8524 /* LazyVStackDemoView.swift */,
 				F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */,
 			);
 			path = View;
@@ -183,7 +183,7 @@
 			files = (
 				F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */,
 				F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */,
-				F44BEDA9253B0519008D8524 /* ScrollableLazyVStackDemoView.swift in Sources */,
+				F44BEDA9253B0519008D8524 /* LazyVStackDemoView.swift in Sources */,
 				F4823409253AAF5500CD9ACC /* RootView.swift in Sources */,
 				F44BEDB2253B81ED008D8524 /* LazyVGridDemoView.swift in Sources */,
 				F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */,
