@@ -36,6 +36,12 @@ struct RootView: View {
                             Text("Scrollable LazyVStack")
                         }
                     }
+                    if #available(iOS 14.0, *) {
+                        NavigationLink(destination: LazyVGridDemoView(urls: sample.urls)
+                                                        .navigationBarTitle("LazyVGridDemoView")) {
+                            Text("LazyVGridDemoView")
+                        }
+                    }
                 }
             }
             .navigationBarTitle("URLImage Demo")
