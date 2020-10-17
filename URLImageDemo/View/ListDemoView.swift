@@ -31,6 +31,6 @@ struct ListDemoView: View {
 
 struct ListDemoView_Previews: PreviewProvider {
     static var previews: some View {
-        ListDemoView(urls: SampleURLs.sample50)
+        ListDemoView(urls: SampleURLs.midRes50.urls)
     }
 }

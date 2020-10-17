@@ -36,6 +36,6 @@ struct ScrollableLazyVStackDemoView: View {
 @available(iOS 14.0, *)
 struct ScrollableLazyVStackDemoView_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollableLazyVStackDemoView(urls: SampleURLs.sample50)
+        ScrollableLazyVStackDemoView(urls: SampleURLs.midRes50.urls)
     }
 }
