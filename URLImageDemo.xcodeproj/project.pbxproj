@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823404253AAF5500CD9ACC /* AppDelegate.swift */; };
 		F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823406253AAF5500CD9ACC /* SceneDelegate.swift */; };
-		F4823409253AAF5500CD9ACC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823408253AAF5500CD9ACC /* ContentView.swift */; };
+		F4823409253AAF5500CD9ACC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823408253AAF5500CD9ACC /* RootView.swift */; };
 		F482340B253AAF5600CD9ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340A253AAF5600CD9ACC /* Assets.xcassets */; };
 		F482340E253AAF5600CD9ACC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */; };
 		F4823411253AAF5600CD9ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F482340F253AAF5600CD9ACC /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		F4823401253AAF5500CD9ACC /* URLImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4823404253AAF5500CD9ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4823406253AAF5500CD9ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F4823408253AAF5500CD9ACC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4823408253AAF5500CD9ACC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		F482340A253AAF5600CD9ACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4823410253AAF5600CD9ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,9 +56,9 @@
 		F4823403253AAF5500CD9ACC /* URLImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F4B98B58253AB2E70053E91B /* View */,
 				F4823404253AAF5500CD9ACC /* AppDelegate.swift */,
 				F4823406253AAF5500CD9ACC /* SceneDelegate.swift */,
-				F4823408253AAF5500CD9ACC /* ContentView.swift */,
 				F482340A253AAF5600CD9ACC /* Assets.xcassets */,
 				F482340F253AAF5600CD9ACC /* LaunchScreen.storyboard */,
 				F4823412253AAF5600CD9ACC /* Info.plist */,
@@ -73,6 +73,14 @@
 				F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4B98B58253AB2E70053E91B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4823408253AAF5500CD9ACC /* RootView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +155,7 @@
 			files = (
 				F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */,
 				F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */,
-				F4823409253AAF5500CD9ACC /* ContentView.swift in Sources */,
+				F4823409253AAF5500CD9ACC /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +299,7 @@
 				DEVELOPMENT_TEAM = UEQ8YHF529;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = URLImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +321,7 @@
 				DEVELOPMENT_TEAM = UEQ8YHF529;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = URLImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
