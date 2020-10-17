@@ -20,6 +20,7 @@ struct RootView: View {
                         Text("50 images, 500px").tag(SampleURLs.midRes50)
                         Text("50 images, 1000px").tag(SampleURLs.highRes50)
                         Text("50 images, 2500px").tag(SampleURLs.higherRes50)
+                        Text("1000 images, ≥500px").tag(SampleURLs.largeSet)
                     }
                     Button("Remove Cached Images") {
                         URLImageService.shared.removeAllCachedImages()

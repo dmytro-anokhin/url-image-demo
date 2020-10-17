@@ -19,6 +19,9 @@ enum SampleURLs: Int, CaseIterable, Identifiable {
     /// 50 images ~2500px wide
     case higherRes50
 
+    /// 1000 images starting from 500px wide
+    case largeSet
+
     var id: Int {
         rawValue
     }
@@ -31,6 +34,8 @@ enum SampleURLs: Int, CaseIterable, Identifiable {
                 return SampleURLs.picsum(range: 1000..<1050)
             case .higherRes50:
                 return SampleURLs.picsum(range: 2500..<2550)
+            case .largeSet:
+                return SampleURLs.picsum(range: 500..<500 + 1000)
         }
     }
 
