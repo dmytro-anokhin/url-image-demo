@@ -34,7 +34,7 @@ struct LazyVStackDemoView: View {
 }
 
 @available(iOS 14.0, *)
-struct ScrollableLazyVStackDemoView_Previews: PreviewProvider {
+struct LazyVStackDemoView_Previews: PreviewProvider {
     static var previews: some View {
         LazyVStackDemoView(urls: SampleURLs.midRes50.urls)
     }
