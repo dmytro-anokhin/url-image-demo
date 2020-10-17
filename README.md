@@ -1,2 +1,3 @@
-# url-image-demo
-This is a demo app for URLImage package
+# URLImageDemo
+
+This is a demo app for URLImage package: https://github.com/dmytro-anokhin/url-image
