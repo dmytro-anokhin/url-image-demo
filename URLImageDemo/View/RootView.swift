@@ -38,8 +38,7 @@ struct RootView: View {
                         }
                     }
                     if #available(iOS 14.0, *) {
-                        NavigationLink(destination: LazyVGridDemoView(urls: sample.urls)
-                                                        .navigationBarTitle("LazyVGrid")) {
+                        NavigationLink(destination: makeLazyVGridDemoView()) {
                             Text("LazyVGridDemoView")
                         }
                     }
@@ -47,6 +46,13 @@ struct RootView: View {
             }
             .navigationBarTitle("URLImage Demo")
         }
+    }
+
+    @available(iOS 14.0, *)
+    private func makeLazyVGridDemoView() -> some View {
+        LazyVGridDemoView(urls: sample.urls)
+            .navigationBarTitle("LazyVGrid")
+            .navigationBarItems(trailing: GridConfigurationPresentingView())
     }
 }
 

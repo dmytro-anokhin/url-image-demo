@@ -12,12 +12,15 @@ import URLImage
 @available(iOS 14.0, *)
 struct LazyVGridDemoView: View {
 
+    @EnvironmentObject var appConfiguration: AppConfiguration
+
     let urls: [URL]
 
     var body: some View {
 
         let columns = [
-            GridItem(.adaptive(minimum: 100.0, maximum: 200.0))
+            GridItem(.adaptive(minimum: appConfiguration.grid.length - appConfiguration.grid.length * 0.1,
+                               maximum: appConfiguration.grid.length + appConfiguration.grid.length * 0.1))
         ]
 
         return ScrollView {
@@ -28,8 +31,8 @@ struct LazyVGridDemoView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                     }
-                        .frame(height: 100.0)
-                        .clipped()
+                    .frame(height: appConfiguration.grid.length)
+                    .clipped()
                 }
             }
         }
