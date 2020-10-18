@@ -52,7 +52,8 @@ struct RootView: View {
     private func makeLazyVGridDemoView() -> some View {
         LazyVGridDemoView(urls: sample.urls)
             .navigationBarTitle("LazyVGrid")
-            .navigationBarItems(trailing: GridConfigurationPresentingView())
+            .navigationBarItems(trailing: GridConfigurationView()
+                                    .configurationSheet())
     }
 }
 

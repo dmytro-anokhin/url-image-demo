@@ -11,6 +11,7 @@
 		F44BEDB2253B81ED008D8524 /* LazyVGridDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */; };
 		F44BEDB8253BFAB0008D8524 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDB7253BFAB0008D8524 /* AppConfiguration.swift */; };
 		F44BEDC1253C0349008D8524 /* GridConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDC0253C0349008D8524 /* GridConfigurationView.swift */; };
+		F44BEDC4253C2E58008D8524 /* SheetPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDC3253C2E58008D8524 /* SheetPresentationView.swift */; };
 		F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823404253AAF5500CD9ACC /* AppDelegate.swift */; };
 		F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823406253AAF5500CD9ACC /* SceneDelegate.swift */; };
 		F4823409253AAF5500CD9ACC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823408253AAF5500CD9ACC /* RootView.swift */; };
@@ -27,6 +28,7 @@
 		F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridDemoView.swift; sourceTree = "<group>"; };
 		F44BEDB7253BFAB0008D8524 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		F44BEDC0253C0349008D8524 /* GridConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridConfigurationView.swift; sourceTree = "<group>"; };
+		F44BEDC3253C2E58008D8524 /* SheetPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPresentationView.swift; sourceTree = "<group>"; };
 		F4823401253AAF5500CD9ACC /* URLImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4823404253AAF5500CD9ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4823406253AAF5500CD9ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				F44BEDC0253C0349008D8524 /* GridConfigurationView.swift */,
+				F44BEDC3253C2E58008D8524 /* SheetPresentationView.swift */,
 			);
 			path = Auxilary;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */,
 				F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */,
+				F44BEDC4253C2E58008D8524 /* SheetPresentationView.swift in Sources */,
 				F44BEDB8253BFAB0008D8524 /* AppConfiguration.swift in Sources */,
 				F44BEDA9253B0519008D8524 /* LazyVStackDemoView.swift in Sources */,
 				F44BEDC1253C0349008D8524 /* GridConfigurationView.swift in Sources */,
