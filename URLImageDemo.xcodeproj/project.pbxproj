@@ -11,7 +11,10 @@
 		F44BEDB2253B81ED008D8524 /* LazyVGridDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */; };
 		F44BEDB8253BFAB0008D8524 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDB7253BFAB0008D8524 /* AppConfiguration.swift */; };
 		F44BEDC1253C0349008D8524 /* GridConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDC0253C0349008D8524 /* GridConfigurationView.swift */; };
-		F44BEDC4253C2E58008D8524 /* SheetPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDC3253C2E58008D8524 /* SheetPresentationView.swift */; };
+		F44BEDC7253C957E008D8524 /* URLImageOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDC6253C957E008D8524 /* URLImageOptionsView.swift */; };
+		F44BEDD6253E7B97008D8524 /* ListDemoPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDD5253E7B97008D8524 /* ListDemoPresentationView.swift */; };
+		F44BEDDA253EA78A008D8524 /* LazyVGridDemoPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDD9253EA78A008D8524 /* LazyVGridDemoPresentationView.swift */; };
+		F44BEDDE253ED8E4008D8524 /* LazyVStackPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDDD253ED8E4008D8524 /* LazyVStackPresentationView.swift */; };
 		F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823404253AAF5500CD9ACC /* AppDelegate.swift */; };
 		F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823406253AAF5500CD9ACC /* SceneDelegate.swift */; };
 		F4823409253AAF5500CD9ACC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823408253AAF5500CD9ACC /* RootView.swift */; };
@@ -28,7 +31,10 @@
 		F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridDemoView.swift; sourceTree = "<group>"; };
 		F44BEDB7253BFAB0008D8524 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		F44BEDC0253C0349008D8524 /* GridConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridConfigurationView.swift; sourceTree = "<group>"; };
-		F44BEDC3253C2E58008D8524 /* SheetPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPresentationView.swift; sourceTree = "<group>"; };
+		F44BEDC6253C957E008D8524 /* URLImageOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageOptionsView.swift; sourceTree = "<group>"; };
+		F44BEDD5253E7B97008D8524 /* ListDemoPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoPresentationView.swift; sourceTree = "<group>"; };
+		F44BEDD9253EA78A008D8524 /* LazyVGridDemoPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridDemoPresentationView.swift; sourceTree = "<group>"; };
+		F44BEDDD253ED8E4008D8524 /* LazyVStackPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackPresentationView.swift; sourceTree = "<group>"; };
 		F4823401253AAF5500CD9ACC /* URLImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4823404253AAF5500CD9ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4823406253AAF5500CD9ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,9 +63,29 @@
 			isa = PBXGroup;
 			children = (
 				F44BEDC0253C0349008D8524 /* GridConfigurationView.swift */,
-				F44BEDC3253C2E58008D8524 /* SheetPresentationView.swift */,
+				F44BEDC6253C957E008D8524 /* URLImageOptionsView.swift */,
 			);
 			path = Auxilary;
+			sourceTree = "<group>";
+		};
+		F44BEDCC253E79DF008D8524 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				F4B98B69253AB4D60053E91B /* ListDemoView.swift */,
+				F44BEDA8253B0519008D8524 /* LazyVStackDemoView.swift */,
+				F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		F44BEDCD253E7A05008D8524 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F44BEDD5253E7B97008D8524 /* ListDemoPresentationView.swift */,
+				F44BEDDD253ED8E4008D8524 /* LazyVStackPresentationView.swift */,
+				F44BEDD9253EA78A008D8524 /* LazyVGridDemoPresentationView.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		F48233F8253AAF5500CD9ACC = {
@@ -104,11 +130,10 @@
 		F4B98B58253AB2E70053E91B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F44BEDCD253E7A05008D8524 /* Presentation */,
+				F44BEDCC253E79DF008D8524 /* Demo */,
 				F44BEDBA253C032B008D8524 /* Auxilary */,
 				F4823408253AAF5500CD9ACC /* RootView.swift */,
-				F4B98B69253AB4D60053E91B /* ListDemoView.swift */,
-				F44BEDA8253B0519008D8524 /* LazyVStackDemoView.swift */,
-				F44BEDB1253B81EC008D8524 /* LazyVGridDemoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,12 +225,15 @@
 			files = (
 				F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */,
 				F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */,
-				F44BEDC4253C2E58008D8524 /* SheetPresentationView.swift in Sources */,
 				F44BEDB8253BFAB0008D8524 /* AppConfiguration.swift in Sources */,
 				F44BEDA9253B0519008D8524 /* LazyVStackDemoView.swift in Sources */,
+				F44BEDDA253EA78A008D8524 /* LazyVGridDemoPresentationView.swift in Sources */,
+				F44BEDD6253E7B97008D8524 /* ListDemoPresentationView.swift in Sources */,
 				F44BEDC1253C0349008D8524 /* GridConfigurationView.swift in Sources */,
+				F44BEDDE253ED8E4008D8524 /* LazyVStackPresentationView.swift in Sources */,
 				F4823409253AAF5500CD9ACC /* RootView.swift in Sources */,
 				F44BEDB2253B81ED008D8524 /* LazyVGridDemoView.swift in Sources */,
+				F44BEDC7253C957E008D8524 /* URLImageOptionsView.swift in Sources */,
 				F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */,
 				F4B98B6A253AB4D60053E91B /* ListDemoView.swift in Sources */,
 			);

@@ -8,37 +8,42 @@
 import SwiftUI
 import URLImage
 
-struct RootView: View {
 
-    @State var sample: SampleURLs = .midRes50
+struct RootView: View {
 
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Settings")) {
-                    Picker("Sample", selection: $sample) {
+                Section(header: Text("Sample")) {
+                    Picker("Sample Size", selection: $sample) {
                         Text("50 images, 500px").tag(SampleURLs.midRes50)
                         Text("50 images, 1000px").tag(SampleURLs.highRes50)
                         Text("50 images, 2500px").tag(SampleURLs.higherRes50)
                         Text("1000 images, ≥500px").tag(SampleURLs.largeSet)
                     }
+                }
+                Section(header: Text("URLImage")) {
+                    NavigationLink(
+                        destination: URLImageOptionsView(isRemoveCachedImagesButtonVisible: false)
+                                        .navigationBarTitle("Default Options", displayMode: .inline),
+                        label: {
+                            Text("Default Options")
+                        })
                     Button("Remove Cached Images") {
                         URLImageService.shared.removeAllCachedImages()
                     }
                 }
                 Section(header: Text("Collections")) {
-                    NavigationLink(destination: ListDemoView(urls: sample.urls)
-                                                    .navigationBarTitle("List")) {
+                    NavigationLink(destination: ListDemoPresentationView(urls: sample.urls)) {
                         Text("List")
                     }
                     if #available(iOS 14.0, *) {
-                        NavigationLink(destination: LazyVStackDemoView(urls: sample.urls)
-                                                        .navigationBarTitle("LazyVStack")) {
+                        NavigationLink(destination: LazyVStackPresentationView(urls: sample.urls)) {
                             Text("LazyVStack")
                         }
                     }
                     if #available(iOS 14.0, *) {
-                        NavigationLink(destination: makeLazyVGridDemoView()) {
+                        NavigationLink(destination: LazyVGridDemoPresentationView(urls: sample.urls)) {
                             Text("LazyVGridDemoView")
                         }
                     }
@@ -48,14 +53,11 @@ struct RootView: View {
         }
     }
 
-    @available(iOS 14.0, *)
-    private func makeLazyVGridDemoView() -> some View {
-        LazyVGridDemoView(urls: sample.urls)
-            .navigationBarTitle("LazyVGrid")
-            .navigationBarItems(trailing: GridConfigurationView()
-                                    .configurationSheet())
-    }
+    @EnvironmentObject private var appConfiguration: AppConfiguration
+
+    @State private var sample: SampleURLs = .midRes50
 }
+
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {

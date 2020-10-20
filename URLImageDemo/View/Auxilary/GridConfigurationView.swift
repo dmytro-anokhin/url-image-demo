@@ -11,10 +11,6 @@ import Combine
 
 struct GridConfigurationView: View {
 
-    @EnvironmentObject var appConfiguration: AppConfiguration
-
-    @State private var input: String = ""
-
     var body: some View {
         Form {
             Section(header: Text("Item Length")) {
@@ -23,14 +19,18 @@ struct GridConfigurationView: View {
             }
         }
         .onAppear {
-            input = String(Double(appConfiguration.grid.length))
+            input = String(Double(appConfiguration.gridConfiguration.length))
         }
         .onDisappear {
             if let number = Double(input) {
-                appConfiguration.grid.length = CGFloat(number)
+                appConfiguration.gridConfiguration.length = CGFloat(number)
             }
         }
     }
+
+    @EnvironmentObject private var appConfiguration: AppConfiguration
+
+    @State private var input: String = ""
 }
 
 

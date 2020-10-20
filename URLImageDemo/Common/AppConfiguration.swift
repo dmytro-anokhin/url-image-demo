@@ -7,6 +7,7 @@
 
 import Combine
 import CoreGraphics
+import URLImage
 
 
 final class AppConfiguration: ObservableObject {
@@ -16,5 +17,7 @@ final class AppConfiguration: ObservableObject {
         var length: CGFloat = 200.0
     }
 
-    @Published var grid = GridConfiguration()
+    @Published var gridConfiguration = GridConfiguration()
+
+    @Published var urlImageOptions = URLImageService.shared.defaultOptions
 }
