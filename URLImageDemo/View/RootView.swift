@@ -25,7 +25,7 @@ struct RootView: View {
                 Section(header: Text("URLImage")) {
                     NavigationLink(
                         destination: URLImageOptionsView(isRemoveCachedImagesButtonVisible: false)
-                                        .navigationBarTitle("Default Options", displayMode: .inline),
+                            .navigationBarTitle("Default Options"),
                         label: {
                             Text("Default Options")
                         })

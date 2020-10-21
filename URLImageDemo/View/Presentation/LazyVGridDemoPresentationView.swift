@@ -48,7 +48,7 @@ struct LazyVGridDemoPresentationView: View {
                                 URLImageOptionsView()
                         }
                     }
-                    .navigationBarTitle(sheet.rawValue, displayMode: .inline)
+                    .navigationBarTitle(sheet.rawValue)
                     .navigationBarItems(leading: Button("Done") {
                         presentedSheet = nil
                     }

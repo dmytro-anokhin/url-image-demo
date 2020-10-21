@@ -31,7 +31,7 @@ struct LazyVStackPresentationView: View {
             .sheet(isPresented: $isURLImageOptionsSheetPresented) {
                 NavigationView {
                     URLImageOptionsView()
-                        .navigationBarTitle("URLImageOptions", displayMode: .inline)
+                        .navigationBarTitle("URLImageOptions")
                         .navigationBarItems(leading: Button("Done") {
                             isURLImageOptionsSheetPresented = false
                         }

@@ -30,7 +30,8 @@ struct ListDemoPresentationView: View {
             .sheet(isPresented: $isURLImageOptionsSheetPresented) {
                 NavigationView {
                     URLImageOptionsView()
-                        .navigationBarTitle("URLImageOptions", displayMode: .inline)
+                        .environmentObject(appConfiguration)
+                        .navigationBarTitle("URLImageOptions")
                         .navigationBarItems(leading: Button("Done") {
                             isURLImageOptionsSheetPresented = false
                         }
