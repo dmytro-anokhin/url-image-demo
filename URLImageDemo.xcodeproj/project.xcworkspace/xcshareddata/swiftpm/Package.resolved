@@ -5,8 +5,8 @@
         "package": "URLImage",
         "repositoryURL": "git@github.com:dmytro-anokhin/url-image.git",
         "state": {
-          "branch": "version_2",
-          "revision": "4d7984f2bee63f08447e9381a2a2532548f7ac78",
+          "branch": "master",
+          "revision": "d349c60319d2fec69b5aa9d00194d9e0b5e96c12",
           "version": null
         }
       }
