@@ -4,6 +4,7 @@
 
 # System
 .DS_Store
+xcshareddata/
 
 ## User settings
 xcuserdata/
