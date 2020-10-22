@@ -20,8 +20,4 @@ final class AppConfiguration: ObservableObject {
     @Published var gridConfiguration = GridConfiguration()
 
     @Published var urlImageOptions = URLImageService.shared.defaultOptions
-
-    deinit {
-        "deinit"
-    }
 }
