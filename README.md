@@ -6,3 +6,7 @@ Current examples:
 - `List`
 - `LazyVStack`
 - `LazyVGrid`
+
+---
+
+If you have an example of UI using `URLImage` in mind, but you don't know how to implement it, open an issue and if I have time I will implement it.
