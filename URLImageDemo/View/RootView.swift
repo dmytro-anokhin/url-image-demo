@@ -48,6 +48,11 @@ struct RootView: View {
                         }
                     }
                 }
+                Section(header: Text("Issues")) {
+                    NavigationLink(destination: Issue96View()) {
+                        Text("Issue 96")
+                    }
+                }
             }
             .navigationBarTitle("URLImage Demo")
         }
