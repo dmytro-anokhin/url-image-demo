@@ -23,11 +23,11 @@ struct URLImageOptionsView: View {
 
     @State private var selectedCachePolicy: CachePolicy = .returnCacheElseLoad
 
-    /// Cache delay for `returnCacheElseLoad` and `returnCacheReload`
+    /// Cache delay for `returnCacheElseLoad`
     @State private var isCacheDelayOn = false
     @State private var cacheDelayInput: String = ""
 
-    /// Download delay for `returnCacheElseLoad` and `returnCacheReload`
+    /// Download delay for `returnCacheElseLoad`
     @State private var isDownloadDelayOn = false
     @State private var downloadDelayInput: String = ""
 
@@ -45,7 +45,6 @@ struct URLImageOptionsView: View {
                 Picker("Policy", selection: $selectedCachePolicy) {
                     Text(CachePolicy.returnCacheElseLoad.rawValue).tag(CachePolicy.returnCacheElseLoad)
                     Text(CachePolicy.returnCacheDontLoad.rawValue).tag(CachePolicy.returnCacheDontLoad)
-                    Text(CachePolicy.returnCacheReload.rawValue).tag(CachePolicy.returnCacheReload)
                     Text(CachePolicy.ignoreCache.rawValue).tag(CachePolicy.ignoreCache)
                 }
 
@@ -76,25 +75,6 @@ struct URLImageOptionsView: View {
 
                         if isDelayOn {
                             TextField("Cache Delay", text: $delayInput)
-                                .keyboardType(.numberPad)
-                        }
-
-                    case .returnCacheReload:
-                        Toggle(isOn: $isCacheDelayOn.animation(), label: {
-                            Text("Delay Cache Lookup")
-                        })
-
-                        if isCacheDelayOn {
-                            TextField("Cache Delay", text: $cacheDelayInput)
-                                .keyboardType(.numberPad)
-                        }
-
-                        Toggle(isOn: $isDownloadDelayOn.animation(), label: {
-                            Text("Delay Download")
-                        })
-
-                        if isDownloadDelayOn {
-                            TextField("Cache Delay", text: $downloadDelayInput)
                                 .keyboardType(.numberPad)
                         }
 
@@ -167,27 +147,6 @@ struct URLImageOptionsView: View {
                         delayInput = ""
                     }
 
-                case .returnCacheReload(let cacheDelay, let downloadDelay):
-                    selectedCachePolicy = .returnCacheReload
-
-                    if let cacheDelay = cacheDelay {
-                        isCacheDelayOn = true
-                        cacheDelayInput = String(cacheDelay)
-                    }
-                    else {
-                        isCacheDelayOn = false
-                        cacheDelayInput = ""
-                    }
-
-                    if let downloadDelay = downloadDelay {
-                        isDownloadDelayOn = true
-                        downloadDelayInput = String(downloadDelay)
-                    }
-                    else {
-                        isDownloadDelayOn = false
-                        downloadDelayInput = ""
-                    }
-
                 case .ignoreCache(let delay):
                     selectedCachePolicy = .ignoreCache
 
@@ -221,11 +180,6 @@ struct URLImageOptionsView: View {
                     let delay = isDelayOn ? TimeInterval(delayInput) : nil
                     appConfiguration.urlImageOptions.cachePolicy = .returnCacheDontLoad(delay: delay)
 
-                case .returnCacheReload:
-                    let cacheDelay = isCacheDelayOn ? TimeInterval(cacheDelayInput) : nil
-                    let downloadDelay = isDownloadDelayOn ? TimeInterval(downloadDelayInput) : nil
-                    appConfiguration.urlImageOptions.cachePolicy = .returnCacheReload(cacheDelay: cacheDelay, downloadDelay: downloadDelay)
-
                 case .ignoreCache:
                     let delay = isDelayOn ? TimeInterval(delayInput) : nil
                     appConfiguration.urlImageOptions.cachePolicy = .ignoreCache(delay: delay)
@@ -241,8 +195,6 @@ struct URLImageOptionsView: View {
         case returnCacheElseLoad = "Return Cache, Else Load"
 
         case returnCacheDontLoad = "Return Cache, Don't Load"
-
-        case returnCacheReload = "Return Cache, Reload"
 
         case ignoreCache = "Ignore Cache"
 
