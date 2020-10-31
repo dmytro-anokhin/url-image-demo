@@ -23,8 +23,9 @@
 		F482340E253AAF5600CD9ACC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */; };
 		F4823411253AAF5600CD9ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F482340F253AAF5600CD9ACC /* LaunchScreen.storyboard */; };
 		F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B5D253AB41E0053E91B /* SampleURLs.swift */; };
-		F4B98B63253AB47C0053E91B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4B98B62253AB47C0053E91B /* URLImage */; };
 		F4B98B6A253AB4D60053E91B /* ListDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B69253AB4D60053E91B /* ListDemoView.swift */; };
+		F4C15CC5254E0388009CD977 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4C15CC4254E0388009CD977 /* URLImage */; };
+		F4C15CCA254E05C3009CD977 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4C15CC9254E05C3009CD977 /* URLImage */; };
 		F4EE70E125429ABE0021A0DE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EE70DF25429ABE0021A0DE /* Interface.storyboard */; };
 		F4EE70E325429AC00021A0DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EE70E225429AC00021A0DE /* Assets.xcassets */; };
 		F4EE70EA25429AC00021A0DE /* URLImageCompanionWatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F4EE70E925429AC00021A0DE /* URLImageCompanionWatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -37,7 +38,6 @@
 		F4EE70FB25429AC10021A0DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EE70FA25429AC10021A0DE /* Assets.xcassets */; };
 		F4EE70FE25429AC10021A0DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EE70FD25429AC10021A0DE /* Preview Assets.xcassets */; };
 		F4EE710325429AC10021A0DE /* URLImageCompanionWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F4EE70DD25429ABE0021A0DE /* URLImageCompanionWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F4EE71112544B97A0021A0DE /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4EE71102544B97A0021A0DE /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +102,6 @@
 		F4823412253AAF5600CD9ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B98B5D253AB41E0053E91B /* SampleURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleURLs.swift; sourceTree = "<group>"; };
 		F4B98B69253AB4D60053E91B /* ListDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoView.swift; sourceTree = "<group>"; };
-		F4EE70D925429A960021A0DE /* url-image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "url-image"; path = "../url-image"; sourceTree = "<group>"; };
 		F4EE70DD25429ABE0021A0DE /* URLImageCompanionWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageCompanionWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EE70E025429ABE0021A0DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F4EE70E225429AC00021A0DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B98B63253AB47C0053E91B /* URLImage in Frameworks */,
+				F4C15CC5254E0388009CD977 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4EE71112544B97A0021A0DE /* URLImage in Frameworks */,
+				F4C15CCA254E05C3009CD977 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +179,6 @@
 		F48233F8253AAF5500CD9ACC = {
 			isa = PBXGroup;
 			children = (
-				F4EE70D925429A960021A0DE /* url-image */,
 				F4823403253AAF5500CD9ACC /* URLImageDemo */,
 				F4EE70DE25429ABE0021A0DE /* URLImageCompanionWatchApp */,
 				F4EE70ED25429AC00021A0DE /* URLImageCompanionWatchApp Extension */,
@@ -304,7 +302,7 @@
 			);
 			name = URLImageDemo;
 			packageProductDependencies = (
-				F4B98B62253AB47C0053E91B /* URLImage */,
+				F4C15CC4254E0388009CD977 /* URLImage */,
 			);
 			productName = URLImageDemo;
 			productReference = F4823401253AAF5500CD9ACC /* URLImageDemo.app */;
@@ -341,7 +339,7 @@
 			);
 			name = "URLImageCompanionWatchApp Extension";
 			packageProductDependencies = (
-				F4EE71102544B97A0021A0DE /* URLImage */,
+				F4C15CC9254E05C3009CD977 /* URLImage */,
 			);
 			productName = "URLImageCompanionWatchApp Extension";
 			productReference = F4EE70E925429AC00021A0DE /* URLImageCompanionWatchApp Extension.appex */;
@@ -377,7 +375,7 @@
 			);
 			mainGroup = F48233F8253AAF5500CD9ACC;
 			packageReferences = (
-				F4B98B61253AB47C0053E91B /* XCRemoteSwiftPackageReference "url-image" */,
+				F4C15CC3254E0388009CD977 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = F4823402253AAF5500CD9ACC /* Products */;
 			projectDirPath = "";
@@ -781,24 +779,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F4B98B61253AB47C0053E91B /* XCRemoteSwiftPackageReference "url-image" */ = {
+		F4C15CC3254E0388009CD977 /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:dmytro-anokhin/url-image.git";
 			requirement = {
-				branch = version_2_1;
+				branch = master;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F4B98B62253AB47C0053E91B /* URLImage */ = {
+		F4C15CC4254E0388009CD977 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F4B98B61253AB47C0053E91B /* XCRemoteSwiftPackageReference "url-image" */;
+			package = F4C15CC3254E0388009CD977 /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
 		};
-		F4EE71102544B97A0021A0DE /* URLImage */ = {
+		F4C15CC9254E05C3009CD977 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = F4C15CC3254E0388009CD977 /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */
