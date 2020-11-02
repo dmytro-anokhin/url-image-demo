@@ -39,6 +39,9 @@ struct URLImageOptionsView: View {
 
     @State private var isInMemoryDownload = false
 
+    @State private var widthInput: String = ""
+    @State private var heightInput: String = ""
+
     var body: some View {
         Form {
             Section(header: Text("Cache")) {
@@ -97,6 +100,15 @@ struct URLImageOptionsView: View {
                 Toggle(isOn: $isInMemoryDownload, label: {
                     Text("Download in memory")
                 })
+            }
+            Section(header: Text("Size")) {
+                HStack {
+                    TextField("Width", text: $widthInput)
+                        .keyboardType(.numberPad)
+                    Text("x")
+                    TextField("Height", text: $heightInput)
+                        .keyboardType(.numberPad)
+                }
             }
             if isRemoveCachedImagesButtonVisible {
                 Section {
@@ -168,6 +180,11 @@ struct URLImageOptionsView: View {
             }
 
             isInMemoryDownload = appConfiguration.urlImageOptions.isInMemoryDownload
+
+            if let size = appConfiguration.urlImageOptions.maxPixelSize {
+                widthInput = String(Double(size.width))
+                heightInput = String(Double(size.height))
+            }
         }
         .onDisappear {
             switch selectedCachePolicy {
@@ -187,6 +204,14 @@ struct URLImageOptionsView: View {
 
             appConfiguration.urlImageOptions.expiryInterval = TimeInterval(expiryIntervalInput)
             appConfiguration.urlImageOptions.isInMemoryDownload = isInMemoryDownload
+
+            if let width = Double(widthInput), width > 0.0,
+               let height = Double(widthInput), height > 0.0 {
+                appConfiguration.urlImageOptions.maxPixelSize = CGSize(width: width, height: height)
+            }
+            else {
+                appConfiguration.urlImageOptions.maxPixelSize = nil
+            }
         }
     }
 
