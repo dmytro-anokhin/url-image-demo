@@ -42,6 +42,11 @@ struct URLImageOptionsView: View {
     @State private var widthInput: String = ""
     @State private var heightInput: String = ""
 
+    // LoadOptions
+    @State private var isLoadImmediately = false
+    @State private var isLoadOnAppear = false
+    @State private var isCancelOnDisappear = false
+
     var body: some View {
         Form {
             Section(header: Text("Cache")) {
@@ -109,6 +114,17 @@ struct URLImageOptionsView: View {
                     TextField("Height", text: $heightInput)
                         .keyboardType(.numberPad)
                 }
+            }
+            Section(header: Text("Load Options")) {
+                Toggle(isOn: $isLoadImmediately, label: {
+                    Text("Load Immediately")
+                })
+                Toggle(isOn: $isLoadOnAppear, label: {
+                    Text("Load On Appear")
+                })
+                Toggle(isOn: $isCancelOnDisappear, label: {
+                    Text("Cancel On Disappear")
+                })
             }
             if isRemoveCachedImagesButtonVisible {
                 Section {
@@ -185,6 +201,10 @@ struct URLImageOptionsView: View {
                 widthInput = String(Double(size.width))
                 heightInput = String(Double(size.height))
             }
+
+            isLoadImmediately = appConfiguration.urlImageOptions.loadOptions.contains(.loadImmediately)
+            isLoadOnAppear = appConfiguration.urlImageOptions.loadOptions.contains(.loadOnAppear)
+            isCancelOnDisappear = appConfiguration.urlImageOptions.loadOptions.contains(.cancelOnDisappear)
         }
         .onDisappear {
             switch selectedCachePolicy {
@@ -212,6 +232,22 @@ struct URLImageOptionsView: View {
             else {
                 appConfiguration.urlImageOptions.maxPixelSize = nil
             }
+
+            var loadOptions = URLImageOptions.LoadOptions()
+
+            if isLoadImmediately {
+                loadOptions.formUnion(.loadImmediately)
+            }
+
+            if isLoadOnAppear {
+                loadOptions.formUnion(.loadOnAppear)
+            }
+
+            if isCancelOnDisappear {
+                loadOptions.formUnion(.cancelOnDisappear)
+            }
+
+            appConfiguration.urlImageOptions.loadOptions = loadOptions
         }
     }
 
