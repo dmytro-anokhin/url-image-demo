@@ -37,8 +37,6 @@ struct URLImageOptionsView: View {
 
     @State private var expiryIntervalInput: String = ""
 
-    @State private var isInMemoryDownload = false
-
     @State private var widthInput: String = ""
     @State private var heightInput: String = ""
 
@@ -46,6 +44,7 @@ struct URLImageOptionsView: View {
     @State private var isLoadImmediately = false
     @State private var isLoadOnAppear = false
     @State private var isCancelOnDisappear = false
+    @State private var isInMemory = false
 
     var body: some View {
         Form {
@@ -101,11 +100,6 @@ struct URLImageOptionsView: View {
                 TextField("Expire After", text: $expiryIntervalInput)
                     .keyboardType(.numberPad)
             }
-            Section {
-                Toggle(isOn: $isInMemoryDownload, label: {
-                    Text("Download in memory")
-                })
-            }
             Section(header: Text("Size")) {
                 HStack {
                     TextField("Width", text: $widthInput)
@@ -124,6 +118,9 @@ struct URLImageOptionsView: View {
                 })
                 Toggle(isOn: $isCancelOnDisappear, label: {
                     Text("Cancel On Disappear")
+                })
+                Toggle(isOn: $isInMemory, label: {
+                    Text("Download in memory")
                 })
             }
             if isRemoveCachedImagesButtonVisible {
@@ -195,8 +192,6 @@ struct URLImageOptionsView: View {
                 expiryIntervalInput = ""
             }
 
-            isInMemoryDownload = appConfiguration.urlImageOptions.isInMemoryDownload
-
             if let size = appConfiguration.urlImageOptions.maxPixelSize {
                 widthInput = String(Double(size.width))
                 heightInput = String(Double(size.height))
@@ -205,6 +200,7 @@ struct URLImageOptionsView: View {
             isLoadImmediately = appConfiguration.urlImageOptions.loadOptions.contains(.loadImmediately)
             isLoadOnAppear = appConfiguration.urlImageOptions.loadOptions.contains(.loadOnAppear)
             isCancelOnDisappear = appConfiguration.urlImageOptions.loadOptions.contains(.cancelOnDisappear)
+            isInMemory = appConfiguration.urlImageOptions.loadOptions.contains(.inMemory)
         }
         .onDisappear {
             switch selectedCachePolicy {
@@ -223,7 +219,6 @@ struct URLImageOptionsView: View {
             }
 
             appConfiguration.urlImageOptions.expiryInterval = TimeInterval(expiryIntervalInput)
-            appConfiguration.urlImageOptions.isInMemoryDownload = isInMemoryDownload
 
             if let width = Double(widthInput), width > 0.0,
                let height = Double(widthInput), height > 0.0 {
@@ -245,6 +240,10 @@ struct URLImageOptionsView: View {
 
             if isCancelOnDisappear {
                 loadOptions.formUnion(.cancelOnDisappear)
+            }
+
+            if isInMemory {
+                loadOptions.formUnion(.inMemory)
             }
 
             appConfiguration.urlImageOptions.loadOptions = loadOptions
