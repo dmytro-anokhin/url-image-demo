@@ -22,6 +22,7 @@
 		F482340B253AAF5600CD9ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340A253AAF5600CD9ACC /* Assets.xcassets */; };
 		F482340E253AAF5600CD9ACC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */; };
 		F4823411253AAF5600CD9ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F482340F253AAF5600CD9ACC /* LaunchScreen.storyboard */; };
+		F4A7BE422559DD960097019F /* Issue107View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A7BE412559DD960097019F /* Issue107View.swift */; };
 		F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B5D253AB41E0053E91B /* SampleURLs.swift */; };
 		F4B98B6A253AB4D60053E91B /* ListDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B69253AB4D60053E91B /* ListDemoView.swift */; };
 		F4C15CC5254E0388009CD977 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4C15CC4254E0388009CD977 /* URLImage */; };
@@ -100,6 +101,8 @@
 		F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4823410253AAF5600CD9ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4823412253AAF5600CD9ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4A7BE412559DD960097019F /* Issue107View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue107View.swift; sourceTree = "<group>"; };
+		F4AE948E255C7DDD00330A7F /* url-image */ = {isa = PBXFileReference; lastKnownFileType = text; name = "url-image"; path = "../url-image"; sourceTree = "<group>"; };
 		F4B98B5D253AB41E0053E91B /* SampleURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleURLs.swift; sourceTree = "<group>"; };
 		F4B98B69253AB4D60053E91B /* ListDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoView.swift; sourceTree = "<group>"; };
 		F4EE70DD25429ABE0021A0DE /* URLImageCompanionWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageCompanionWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				F44B08BD25474F1E00093E23 /* Issue96View.swift */,
+				F4A7BE412559DD960097019F /* Issue107View.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -179,6 +183,7 @@
 		F48233F8253AAF5500CD9ACC = {
 			isa = PBXGroup;
 			children = (
+				F4AE948E255C7DDD00330A7F /* url-image */,
 				F4823403253AAF5500CD9ACC /* URLImageDemo */,
 				F4EE70DE25429ABE0021A0DE /* URLImageCompanionWatchApp */,
 				F4EE70ED25429AC00021A0DE /* URLImageCompanionWatchApp Extension */,
@@ -430,6 +435,7 @@
 				F44BEDB8253BFAB0008D8524 /* AppConfiguration.swift in Sources */,
 				F44BEDA9253B0519008D8524 /* LazyVStackDemoView.swift in Sources */,
 				F44BEDDA253EA78A008D8524 /* LazyVGridDemoPresentationView.swift in Sources */,
+				F4A7BE422559DD960097019F /* Issue107View.swift in Sources */,
 				F44BEDD6253E7B97008D8524 /* ListDemoPresentationView.swift in Sources */,
 				F44BEDC1253C0349008D8524 /* GridConfigurationView.swift in Sources */,
 				F44BEDDE253ED8E4008D8524 /* LazyVStackPresentationView.swift in Sources */,
