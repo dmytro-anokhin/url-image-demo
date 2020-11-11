@@ -15,14 +15,15 @@ struct Issue107View: View {
 
     var body: some View {
         VStack {
+            Text("The view loads an image from the same URL every time. Before every load previous image is removed from cache. Expected that a new image appears every time.")
             URLImage(url: url,
                      options: appConfiguration.urlImageOptions) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
-            Text("Counter = \(counter)")
-            Button("Next") {
+            Text("URL = \(url), Counter = \(counter)")
+            Button("Load") {
                 URLImageService.shared.removeImageWithURL(url)
                 counter += 1
             }
