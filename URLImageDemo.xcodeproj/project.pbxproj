@@ -102,7 +102,6 @@
 		F4823410253AAF5600CD9ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4823412253AAF5600CD9ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4A7BE412559DD960097019F /* Issue107View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue107View.swift; sourceTree = "<group>"; };
-		F4AE948E255C7DDD00330A7F /* url-image */ = {isa = PBXFileReference; lastKnownFileType = text; name = "url-image"; path = "../url-image"; sourceTree = "<group>"; };
 		F4B98B5D253AB41E0053E91B /* SampleURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleURLs.swift; sourceTree = "<group>"; };
 		F4B98B69253AB4D60053E91B /* ListDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoView.swift; sourceTree = "<group>"; };
 		F4EE70DD25429ABE0021A0DE /* URLImageCompanionWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageCompanionWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +182,6 @@
 		F48233F8253AAF5500CD9ACC = {
 			isa = PBXGroup;
 			children = (
-				F4AE948E255C7DDD00330A7F /* url-image */,
 				F4823403253AAF5500CD9ACC /* URLImageDemo */,
 				F4EE70DE25429ABE0021A0DE /* URLImageCompanionWatchApp */,
 				F4EE70ED25429AC00021A0DE /* URLImageCompanionWatchApp Extension */,
