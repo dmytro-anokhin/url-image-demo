@@ -94,6 +94,9 @@ struct URLImageOptionsView: View {
                             TextField("Download Delay", text: $delayInput)
                                 .keyboardType(.numberPad)
                         }
+
+                    case .useProtocol:
+                        EmptyView()
                 }
             }
             Section(header: Text("Expire After")) {
@@ -183,6 +186,9 @@ struct URLImageOptionsView: View {
                         isDelayOn = false
                         delayInput = ""
                     }
+
+                case .useProtocol:
+                    selectedCachePolicy = .useProtocol
             }
 
             if let expiryInterval = appConfiguration.urlImageOptions.expiryInterval {
@@ -216,6 +222,9 @@ struct URLImageOptionsView: View {
                 case .ignoreCache:
                     let delay = isDelayOn ? TimeInterval(delayInput) : nil
                     appConfiguration.urlImageOptions.cachePolicy = .ignoreCache(delay: delay)
+
+                case .useProtocol:
+                    appConfiguration.urlImageOptions.cachePolicy = .useProtocol
             }
 
             appConfiguration.urlImageOptions.expiryInterval = TimeInterval(expiryIntervalInput)
@@ -257,6 +266,8 @@ struct URLImageOptionsView: View {
         case returnCacheDontLoad = "Return Cache, Don't Load"
 
         case ignoreCache = "Ignore Cache"
+
+        case useProtocol = "Use Protocol"
 
         var id: String {
             rawValue
