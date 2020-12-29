@@ -16,12 +16,21 @@
 		F44BEDD6253E7B97008D8524 /* ListDemoPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDD5253E7B97008D8524 /* ListDemoPresentationView.swift */; };
 		F44BEDDA253EA78A008D8524 /* LazyVGridDemoPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDD9253EA78A008D8524 /* LazyVGridDemoPresentationView.swift */; };
 		F44BEDDE253ED8E4008D8524 /* LazyVStackPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDDD253ED8E4008D8524 /* LazyVStackPresentationView.swift */; };
+		F467DF3C25800CA700C62D72 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F467DF3B25800CA700C62D72 /* WidgetKit.framework */; };
+		F467DF3E25800CA700C62D72 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F467DF3D25800CA700C62D72 /* SwiftUI.framework */; };
+		F467DF4125800CA700C62D72 /* URLImageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467DF4025800CA700C62D72 /* URLImageWidget.swift */; };
+		F467DF4425800CA900C62D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F467DF4325800CA900C62D72 /* Assets.xcassets */; };
+		F467DF4625800CA900C62D72 /* URLImageWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F467DF4225800CA700C62D72 /* URLImageWidget.intentdefinition */; };
+		F467DF4725800CA900C62D72 /* URLImageWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F467DF4225800CA700C62D72 /* URLImageWidget.intentdefinition */; };
+		F467DF4A25800CA900C62D72 /* URLImageWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F467DF3A25800CA700C62D72 /* URLImageWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F467DF5425800D1F00C62D72 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F467DF5325800D1F00C62D72 /* URLImage */; };
 		F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823404253AAF5500CD9ACC /* AppDelegate.swift */; };
 		F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823406253AAF5500CD9ACC /* SceneDelegate.swift */; };
 		F4823409253AAF5500CD9ACC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4823408253AAF5500CD9ACC /* RootView.swift */; };
 		F482340B253AAF5600CD9ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340A253AAF5600CD9ACC /* Assets.xcassets */; };
 		F482340E253AAF5600CD9ACC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */; };
 		F4823411253AAF5600CD9ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F482340F253AAF5600CD9ACC /* LaunchScreen.storyboard */; };
+		F4893BC3258BF3AE0021FFD7 /* Issue119View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4893BC2258BF3AE0021FFD7 /* Issue119View.swift */; };
 		F4A7BE422559DD960097019F /* Issue107View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A7BE412559DD960097019F /* Issue107View.swift */; };
 		F4B98B5E253AB41E0053E91B /* SampleURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B5D253AB41E0053E91B /* SampleURLs.swift */; };
 		F4B98B6A253AB4D60053E91B /* ListDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B98B69253AB4D60053E91B /* ListDemoView.swift */; };
@@ -42,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F467DF4825800CA900C62D72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F48233F9253AAF5500CD9ACC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F467DF3925800CA700C62D72;
+			remoteInfo = URLImageWidgetExtension;
+		};
 		F4EE70EB25429AC00021A0DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F48233F9253AAF5500CD9ACC /* Project object */;
@@ -59,6 +75,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F467DF4E25800CA900C62D72 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F467DF4A25800CA900C62D72 /* URLImageWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4EE710725429AC10021A0DE /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,6 +120,13 @@
 		F44BEDD5253E7B97008D8524 /* ListDemoPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoPresentationView.swift; sourceTree = "<group>"; };
 		F44BEDD9253EA78A008D8524 /* LazyVGridDemoPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridDemoPresentationView.swift; sourceTree = "<group>"; };
 		F44BEDDD253ED8E4008D8524 /* LazyVStackPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackPresentationView.swift; sourceTree = "<group>"; };
+		F467DF3A25800CA700C62D72 /* URLImageWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = URLImageWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F467DF3B25800CA700C62D72 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F467DF3D25800CA700C62D72 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F467DF4025800CA700C62D72 /* URLImageWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageWidget.swift; sourceTree = "<group>"; };
+		F467DF4225800CA700C62D72 /* URLImageWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = URLImageWidget.intentdefinition; sourceTree = "<group>"; };
+		F467DF4325800CA900C62D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F467DF4525800CA900C62D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4823401253AAF5500CD9ACC /* URLImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4823404253AAF5500CD9ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4823406253AAF5500CD9ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,9 +135,11 @@
 		F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4823410253AAF5600CD9ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4823412253AAF5600CD9ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4893BC2258BF3AE0021FFD7 /* Issue119View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue119View.swift; sourceTree = "<group>"; };
 		F4A7BE412559DD960097019F /* Issue107View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue107View.swift; sourceTree = "<group>"; };
 		F4B98B5D253AB41E0053E91B /* SampleURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleURLs.swift; sourceTree = "<group>"; };
 		F4B98B69253AB4D60053E91B /* ListDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemoView.swift; sourceTree = "<group>"; };
+		F4E2929D25927EAD00E8FDD6 /* url-image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "url-image"; path = "../url-image"; sourceTree = "<group>"; };
 		F4EE70DD25429ABE0021A0DE /* URLImageCompanionWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLImageCompanionWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EE70E025429ABE0021A0DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F4EE70E225429AC00021A0DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +158,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F467DF3725800CA700C62D72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F467DF3E25800CA700C62D72 /* SwiftUI.framework in Frameworks */,
+				F467DF5425800D1F00C62D72 /* URLImage in Frameworks */,
+				F467DF3C25800CA700C62D72 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F48233FE253AAF5500CD9ACC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +192,7 @@
 			children = (
 				F44B08BD25474F1E00093E23 /* Issue96View.swift */,
 				F4A7BE412559DD960097019F /* Issue107View.swift */,
+				F4893BC2258BF3AE0021FFD7 /* Issue119View.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -179,12 +226,25 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		F467DF3F25800CA700C62D72 /* URLImageWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F467DF4025800CA700C62D72 /* URLImageWidget.swift */,
+				F467DF4225800CA700C62D72 /* URLImageWidget.intentdefinition */,
+				F467DF4325800CA900C62D72 /* Assets.xcassets */,
+				F467DF4525800CA900C62D72 /* Info.plist */,
+			);
+			path = URLImageWidget;
+			sourceTree = "<group>";
+		};
 		F48233F8253AAF5500CD9ACC = {
 			isa = PBXGroup;
 			children = (
+				F4E2929D25927EAD00E8FDD6 /* url-image */,
 				F4823403253AAF5500CD9ACC /* URLImageDemo */,
 				F4EE70DE25429ABE0021A0DE /* URLImageCompanionWatchApp */,
 				F4EE70ED25429AC00021A0DE /* URLImageCompanionWatchApp Extension */,
+				F467DF3F25800CA700C62D72 /* URLImageWidget */,
 				F4823402253AAF5500CD9ACC /* Products */,
 				F4EE710F2544B97A0021A0DE /* Frameworks */,
 			);
@@ -196,6 +256,7 @@
 				F4823401253AAF5500CD9ACC /* URLImageDemo.app */,
 				F4EE70DD25429ABE0021A0DE /* URLImageCompanionWatchApp.app */,
 				F4EE70E925429AC00021A0DE /* URLImageCompanionWatchApp Extension.appex */,
+				F467DF3A25800CA700C62D72 /* URLImageWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +343,8 @@
 		F4EE710F2544B97A0021A0DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F467DF3B25800CA700C62D72 /* WidgetKit.framework */,
+				F467DF3D25800CA700C62D72 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -289,6 +352,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F467DF3925800CA700C62D72 /* URLImageWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F467DF4B25800CA900C62D72 /* Build configuration list for PBXNativeTarget "URLImageWidgetExtension" */;
+			buildPhases = (
+				F467DF3625800CA700C62D72 /* Sources */,
+				F467DF3725800CA700C62D72 /* Frameworks */,
+				F467DF3825800CA700C62D72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = URLImageWidgetExtension;
+			packageProductDependencies = (
+				F467DF5325800D1F00C62D72 /* URLImage */,
+			);
+			productName = URLImageWidgetExtension;
+			productReference = F467DF3A25800CA700C62D72 /* URLImageWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F4823400253AAF5500CD9ACC /* URLImageDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4823415253AAF5600CD9ACC /* Build configuration list for PBXNativeTarget "URLImageDemo" */;
@@ -297,11 +380,13 @@
 				F48233FE253AAF5500CD9ACC /* Frameworks */,
 				F48233FF253AAF5500CD9ACC /* Resources */,
 				F4EE710B25429AC10021A0DE /* Embed Watch Content */,
+				F467DF4E25800CA900C62D72 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F4EE710225429AC10021A0DE /* PBXTargetDependency */,
+				F467DF4925800CA900C62D72 /* PBXTargetDependency */,
 			);
 			name = URLImageDemo;
 			packageProductDependencies = (
@@ -354,9 +439,12 @@
 		F48233F9253AAF5500CD9ACC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					F467DF3925800CA700C62D72 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					F4823400253AAF5500CD9ACC = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
@@ -387,11 +475,20 @@
 				F4823400253AAF5500CD9ACC /* URLImageDemo */,
 				F4EE70DC25429ABE0021A0DE /* URLImageCompanionWatchApp */,
 				F4EE70E825429AC00021A0DE /* URLImageCompanionWatchApp Extension */,
+				F467DF3925800CA700C62D72 /* URLImageWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F467DF3825800CA700C62D72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F467DF4425800CA900C62D72 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F48233FF253AAF5500CD9ACC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,12 +520,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F467DF3625800CA700C62D72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F467DF4625800CA900C62D72 /* URLImageWidget.intentdefinition in Sources */,
+				F467DF4125800CA700C62D72 /* URLImageWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F48233FD253AAF5500CD9ACC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4823405253AAF5500CD9ACC /* AppDelegate.swift in Sources */,
 				F44B08BE25474F1E00093E23 /* Issue96View.swift in Sources */,
+				F4893BC3258BF3AE0021FFD7 /* Issue119View.swift in Sources */,
+				F467DF4725800CA900C62D72 /* URLImageWidget.intentdefinition in Sources */,
 				F4823407253AAF5500CD9ACC /* SceneDelegate.swift in Sources */,
 				F44BEDB8253BFAB0008D8524 /* AppConfiguration.swift in Sources */,
 				F44BEDA9253B0519008D8524 /* LazyVStackDemoView.swift in Sources */,
@@ -461,6 +569,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F467DF4925800CA900C62D72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F467DF3925800CA700C62D72 /* URLImageWidgetExtension */;
+			targetProxy = F467DF4825800CA900C62D72 /* PBXContainerItemProxy */;
+		};
 		F4EE70EC25429AC00021A0DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F4EE70E825429AC00021A0DE /* URLImageCompanionWatchApp Extension */;
@@ -493,6 +606,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F467DF4C25800CA900C62D72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEQ8YHF529;
+				INFOPLIST_FILE = URLImageWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.danokhin.URLImageDemo.URLImageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F467DF4D25800CA900C62D72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEQ8YHF529;
+				INFOPLIST_FILE = URLImageWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.danokhin.URLImageDemo.URLImageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F4823413253AAF5600CD9ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -612,6 +769,7 @@
 		F4823416253AAF5600CD9ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -634,6 +792,7 @@
 		F4823417253AAF5600CD9ACC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -744,6 +903,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F467DF4B25800CA900C62D72 /* Build configuration list for PBXNativeTarget "URLImageWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F467DF4C25800CA900C62D72 /* Debug */,
+				F467DF4D25800CA900C62D72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F48233FC253AAF5500CD9ACC /* Build configuration list for PBXProject "URLImageDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -794,6 +962,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F467DF5325800D1F00C62D72 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = URLImage;
+		};
 		F4C15CC4254E0388009CD977 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4C15CC3254E0388009CD977 /* XCRemoteSwiftPackageReference "url-image" */;

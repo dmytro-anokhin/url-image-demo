@@ -55,6 +55,9 @@ struct RootView: View {
                     NavigationLink(destination: Issue107View(url: sample.urls.first!)) {
                         Text("Issue 107")
                     }
+                    NavigationLink(destination: Issue119View()) {
+                        Text("Issue 119")
+                    }
                 }
             }
             .navigationBarTitle("URLImage Demo")
