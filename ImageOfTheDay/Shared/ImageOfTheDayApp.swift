@@ -51,12 +51,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
              self.handleAppRefresh(task: task as! BGAppRefreshTask)
         }
 
-        scheduleAppRefresh()
-
         return true
     }
 
-    func scheduleAppRefresh() {
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        scheduleAppRefresh()
+    }
+
+    private func scheduleAppRefresh() {
         let request = BGAppRefreshTaskRequest(identifier: "org.danokhin.ImageOfTheDay.refresh")
 
         // Fetch no earlier than 15 minutes from now
@@ -69,7 +71,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
     }
 
-    func handleAppRefresh(task: BGAppRefreshTask) {
+    private func handleAppRefresh(task: BGAppRefreshTask) {
         // Schedule a new refresh task
         scheduleAppRefresh()
 
