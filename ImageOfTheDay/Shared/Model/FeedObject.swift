@@ -21,6 +21,8 @@ final class FeedObject: ObservableObject {
         "https://www.reddit.com/r/photojournalism/.rss?format=xml"
     ]
 
+    static let shared = FeedObject()
+
     let url: URL
 
     init(url: URL = URL(string: FeedObject.list[0])!) {
@@ -36,7 +38,7 @@ final class FeedObject: ObservableObject {
         case parse(_ error: Swift.Error)
     }
 
-    func load() {
+    func load(_ completion: ((_ success: Bool) -> Void)? = nil) {
         guard !isLoading else {
             return
         }
@@ -49,7 +51,7 @@ final class FeedObject: ObservableObject {
             .map {
                 $0.data
             }
-            .receive(on: DispatchQueue.global())
+            .receive(on: DispatchQueue.global()) // Release URLSession queue
             .flatMap {
                 FeedParser
                     .parse(data: $0)
@@ -58,19 +60,22 @@ final class FeedObject: ObservableObject {
                     }
             }
             .receive(on: RunLoop.main)
-            .sink(receiveCompletion: { [weak self] _ in
-                guard let self = self else {
-                    return
-                }
+            .sink(
+                receiveCompletion: { [weak self] _ in
+                    guard let self = self else {
+                        return
+                    }
 
-                self.isLoading = false
-            }, receiveValue: { [weak self] feed in
-                guard let self = self else {
-                    return
-                }
+                    self.isLoading = false
+                },
+                receiveValue: { [weak self] feed in
+                    guard let self = self else {
+                        return
+                    }
 
-                self.feed = feed
-            })
+                    self.feed = feed
+                    completion?(true)
+                })
     }
 
     private var isLoading = false

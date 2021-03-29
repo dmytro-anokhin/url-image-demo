@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @StateObject var feedObject = FeedObject()
+    @StateObject var feedObject = FeedObject.shared// FeedObject()
 
     var body: some View {
         NavigationView {
             FeedView(feed: feedObject.feed)
                 .onAppear {
-                    feedObject.load()
+                    //feedObject.load()
                 }
                 .navigationTitle(Text("Title"))
         }

@@ -51,10 +51,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
              self.handleAppRefresh(task: task as! BGAppRefreshTask)
         }
 
+        scheduleAppRefresh()
+
         return true
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        print("did enter background")
         scheduleAppRefresh()
     }
 
@@ -93,9 +96,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 //        // Start the operation
 //        operationQueue.addOperation(operation)
 
-
-
-        task.setTaskCompleted(success: true)
+        FeedObject.shared.load {
+            task.setTaskCompleted(success: $0)
+        }
      }
 }
 
