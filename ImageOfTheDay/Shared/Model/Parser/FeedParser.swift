@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 
 /// Parser for a news feed in RSS or Atom format
@@ -54,16 +55,29 @@ class FeedParser: NSObject {
         var children: [XMLNode] = []
     }
 
-    let url: URL
+    static func parse(data: Data) -> Future<Feed, Error> {
+        Future() { promise in
+            let parser = FeedParser(data: data)
+
+            parser.parse { result in
+                let _ = parser // keep alive
+                promise(result)
+            }
+        }
+    }
 
     init?(url: URL) {
         guard let parser = XMLParser(contentsOf: url) else {
             return nil
         }
 
-        self.url = url
         self.parser = parser
 
+        super.init()
+    }
+
+    init(data: Data) {
+        parser = XMLParser(data: data)
         super.init()
     }
 

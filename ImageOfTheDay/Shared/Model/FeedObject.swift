@@ -29,30 +29,53 @@ final class FeedObject: ObservableObject {
 
     @Published private(set) var feed = Feed(items: [])
 
+    enum Error: Swift.Error {
+
+        case network(_ error: URLError)
+
+        case parse(_ error: Swift.Error)
+    }
+
     func load() {
-        
-        guard let parser = FeedParser(url: url) else {
+        guard !isLoading else {
             return
         }
 
-        self.parser = parser
-
-        parser.parse { [weak self] result in
-            guard let self = self else {
-                return
+        cancellable = URLSession.shared
+            .dataTaskPublisher(for: url)
+            .mapError {
+                Error.network($0)
             }
-
-            print("parse complete with result: \(result)")
-
-            switch result {
-                case .success(let feed):
-                    self.feed = feed
-
-                case .failure:
-                    self.feed = Feed(items: [])
+            .map {
+                $0.data
             }
-        }
+            .receive(on: DispatchQueue.global())
+            .flatMap {
+                FeedParser
+                    .parse(data: $0)
+                    .mapError {
+                        Error.parse($0)
+                    }
+            }
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { [weak self] _ in
+                guard let self = self else {
+                    return
+                }
+
+                self.isLoading = false
+            }, receiveValue: { [weak self] feed in
+                guard let self = self else {
+                    return
+                }
+
+                self.feed = feed
+            })
     }
+
+    private var isLoading = false
+
+    private var cancellable: AnyCancellable?
 
     private var parser: FeedParser?
 
