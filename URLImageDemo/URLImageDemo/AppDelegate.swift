@@ -7,15 +7,43 @@
 
 import UIKit
 import URLImage
+import Combine
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var cancellable: AnyCancellable?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print(URLImageService.shared.diskCacheURL.path)
+
+//        let url = URL(string: "https://homepages.cae.wisc.edu/~ece533/images/airplane.png")!
+//        let cancellable = URLImageService.shared.remoteImagePublisher(url)
+//            .tryMap { $0.cgImage }
+//            .sink { image in
+//                print(image)
+//            }
+//
+//        let urls = [
+//            URL(string: "https://homepages.cae.wisc.edu/~ece533/images/airplane.png")!,
+//            URL(string: "https://homepages.cae.wisc.edu/~ece533/images/lena.png")!,
+//            URL(string: "https://localhost")!
+//        ]
+//
+//        let publishers = urls.map { URLImageService.shared.remoteImagePublisher($0) }
+//
+//        cancellable = Publishers.MergeMany(publishers)
+//            .tryMap { $0.cgImage }
+//            .catch { _ in
+//                Just(nil)
+//            }
+//            .collect()
+//            .sink { results in
+//                print(results)
+//            }
+
         return true
     }
 

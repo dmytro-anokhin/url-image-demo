@@ -135,6 +135,7 @@
 		F482340D253AAF5600CD9ACC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4823410253AAF5600CD9ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4823412253AAF5600CD9ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F487F32B25B246930094BA17 /* url-image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "url-image"; path = "../url-image"; sourceTree = "<group>"; };
 		F4893BC2258BF3AE0021FFD7 /* Issue119View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue119View.swift; sourceTree = "<group>"; };
 		F4A7BE412559DD960097019F /* Issue107View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue107View.swift; sourceTree = "<group>"; };
 		F4B98B5D253AB41E0053E91B /* SampleURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleURLs.swift; sourceTree = "<group>"; };
@@ -239,6 +240,7 @@
 		F48233F8253AAF5500CD9ACC = {
 			isa = PBXGroup;
 			children = (
+				F487F32B25B246930094BA17 /* url-image */,
 				F4823403253AAF5500CD9ACC /* URLImageDemo */,
 				F4EE70DE25429ABE0021A0DE /* URLImageCompanionWatchApp */,
 				F4EE70ED25429AC00021A0DE /* URLImageCompanionWatchApp Extension */,

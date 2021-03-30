@@ -22,6 +22,7 @@ struct Issue107View: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
+            
             Text("URL = \(url), Counter = \(counter)")
             Button("Load") {
                 URLImageService.shared.removeImageWithURL(url)
