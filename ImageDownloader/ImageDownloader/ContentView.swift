@@ -50,7 +50,7 @@ fileprivate struct JPEGExportDocument: FileDocument {
 
 /// The `Model` object implements image load logic using `URLImage` service and manages `JPEGExportDocument` instance.
 ///
-/// `Model` class  implements `ObservableObject` protocol to notify observers when download completed and the document is ready for export.
+/// `Model` class  conforms to `ObservableObject` protocol to notify observers when download completed and the document is ready for export.
 fileprivate final class Model: ObservableObject {
 
     /// URL of the image to download
