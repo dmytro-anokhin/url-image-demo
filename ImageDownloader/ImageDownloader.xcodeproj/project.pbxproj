@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		F4C139312613ACBA003B59E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C139302613ACBA003B59E3 /* ContentView.swift */; };
 		F4C139332613ACBB003B59E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C139322613ACBB003B59E3 /* Assets.xcassets */; };
 		F4C139362613ACBB003B59E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C139352613ACBB003B59E3 /* Preview Assets.xcassets */; };
+		F4C139402613AF5F003B59E3 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4C1393F2613AF5F003B59E3 /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C139402613AF5F003B59E3 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = ImageDownloader;
+			packageProductDependencies = (
+				F4C1393F2613AF5F003B59E3 /* URLImage */,
+			);
 			productName = ImageDownloader;
 			productReference = F4C1392B2613ACBA003B59E3 /* ImageDownloader.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +117,9 @@
 				Base,
 			);
 			mainGroup = F4C139222613ACBA003B59E3;
+			packageReferences = (
+				F4C1393E2613AF5F003B59E3 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = F4C1392C2613ACBA003B59E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,6 +336,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4C1393E2613AF5F003B59E3 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4C1393F2613AF5F003B59E3 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4C1393E2613AF5F003B59E3 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4C139232613ACBA003B59E3 /* Project object */;
 }
