@@ -87,7 +87,7 @@ final class FeedObject: ObservableObject {
     private var urlImageService: URLImageService?
     private var cancellables = Set<AnyCancellable>()
 
-    private func loadImages(_ feed: Feed) {
+    private func loadImages() {
         let store = URLImageFileStore()
         let urlImageService = URLImageService(fileStore: store, inMemoryStore: nil)
 
