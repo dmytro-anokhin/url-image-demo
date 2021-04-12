@@ -57,7 +57,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        print("did enter background")
         scheduleAppRefresh()
     }
 
@@ -78,23 +77,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         // Schedule a new refresh task
         scheduleAppRefresh()
 
-        // Create an operation that performs the main part of the background task
-        // let operation = RefreshAppContentsOperation()
-
-        // Provide an expiration handler for the background task
-        // that cancels the operation
         task.expirationHandler = {
-            //operation.cancel()
+            // TODO: Cancel load
         }
-
-        // Inform the system that the background task is complete
-        // when the operation completes
-//        operation.completionBlock = {
-//            task.setTaskCompleted(success: !operation.isCancelled)
-//        }
-//
-//        // Start the operation
-//        operationQueue.addOperation(operation)
 
         FeedObject.shared.load {
             task.setTaskCompleted(success: $0)
