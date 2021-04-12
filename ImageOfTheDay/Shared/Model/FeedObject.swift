@@ -87,12 +87,12 @@ final class FeedObject: ObservableObject {
     private var urlImageService: URLImageService?
     private var cancellables = Set<AnyCancellable>()
 
-    private func loadImages() {
+    func loadImages() {
         let store = URLImageFileStore()
         let urlImageService = URLImageService(fileStore: store, inMemoryStore: nil)
 
         for item in feed.items {
-            urlImageService.remoteImagePublisher(item.imageURL)
+            urlImageService.remoteImagePublisher(item.imageURL, identifier: nil)
                 .tryMap {
                     $0
                 }
