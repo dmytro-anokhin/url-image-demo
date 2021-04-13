@@ -85,14 +85,15 @@ final class FeedObject: ObservableObject {
     private var parser: FeedParser?
 
     private var urlImageService: URLImageService?
-    private var cancellables = Set<AnyCancellable>()
+
+    private var registry: [URL: AnyCancellable] = [:]
 
     func loadImages() {
         let store = URLImageFileStore()
         let urlImageService = URLImageService(fileStore: store, inMemoryStore: nil)
 
         for item in feed.items {
-            urlImageService.remoteImagePublisher(item.imageURL, identifier: nil)
+            let cancellable = urlImageService.remoteImagePublisher(item.imageURL, identifier: nil)
                 .tryMap {
                     $0
                 }
@@ -101,7 +102,8 @@ final class FeedObject: ObservableObject {
                 }
                 .sink { _ in
                 }
-                .store(in: &self.cancellables)
+
+            registry[item.imageURL] = cancellable
         }
 
         self.urlImageService = urlImageService
