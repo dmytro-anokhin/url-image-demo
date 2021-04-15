@@ -44,6 +44,8 @@ struct ImageOfTheDayApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 
+    static let backgroundRefreshInterval: TimeInterval = 15 * 60
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
@@ -62,9 +64,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     private func scheduleAppRefresh() {
         let request = BGAppRefreshTaskRequest(identifier: "org.danokhin.ImageOfTheDay.refresh")
-
-        // Fetch no earlier than 15 minutes from now
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60)
+        request.earliestBeginDate = Date(timeIntervalSinceNow: AppDelegate.backgroundRefreshInterval)
 
         do {
             try BGTaskScheduler.shared.submit(request)
