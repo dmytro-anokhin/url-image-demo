@@ -81,8 +81,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             // TODO: Cancel load
         }
 
-        FeedObject.shared.load {
-            task.setTaskCompleted(success: $0)
+        FeedObject.shared.load { success in
+            guard success else {
+                task.setTaskCompleted(success: false)
+                return
+            }
+
+            FeedObject.shared.loadImages {
+                task.setTaskCompleted(success: $0)
+            }
         }
      }
 }

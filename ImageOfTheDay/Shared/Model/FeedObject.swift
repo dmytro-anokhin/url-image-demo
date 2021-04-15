@@ -78,6 +78,27 @@ final class FeedObject: ObservableObject {
                 })
     }
 
+    func loadImages(_ completion: ((_ success: Bool) -> Void)? = nil) {
+        let store = URLImageFileStore()
+        let urlImageService = URLImageService(fileStore: store, inMemoryStore: nil)
+
+        let publishers = feed.items.map {
+            urlImageService.remoteImagePublisher($0.imageURL, identifier: nil)
+        }
+
+        imageLoadingCancellable = Publishers.MergeMany(publishers)
+            .tryMap { $0.cgImage }
+            .catch { _ in
+                Just(nil)
+            }
+            .collect()
+            .sink { results in
+                completion?(!results.contains(nil))
+            }
+
+        self.urlImageService = urlImageService
+    }
+
     private var isLoading = false
 
     private var cancellable: AnyCancellable?
@@ -86,26 +107,5 @@ final class FeedObject: ObservableObject {
 
     private var urlImageService: URLImageService?
 
-    private var registry: [URL: AnyCancellable] = [:]
-
-    func loadImages() {
-        let store = URLImageFileStore()
-        let urlImageService = URLImageService(fileStore: store, inMemoryStore: nil)
-
-        for item in feed.items {
-            let cancellable = urlImageService.remoteImagePublisher(item.imageURL, identifier: nil)
-                .tryMap {
-                    $0
-                }
-                .catch { _ in
-                    Just(nil)
-                }
-                .sink { _ in
-                }
-
-            registry[item.imageURL] = cancellable
-        }
-
-        self.urlImageService = urlImageService
-    }
+    private var imageLoadingCancellable: AnyCancellable?
 }
