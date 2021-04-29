@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>https://iso.500px.com/feed/</string>
+	<string>https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss</string>
+	<string>https://www.reddit.com/r/photojournalism/.rss?format=xml</string>
+</array>
+</plist>
