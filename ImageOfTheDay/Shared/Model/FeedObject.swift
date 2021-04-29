@@ -15,35 +15,27 @@ import URLImageStore
 
 final class FeedObject: ObservableObject {
 
-    static let shared = FeedObject(url: getFeeds()[0])
+    static let shared = FeedObject(url: getFeeds()[0].url)
 
     /// Returns the list of feeds bundled with the app
-    static func getFeeds() -> [URL] {
+    static func getFeeds() -> [FeedDescription] {
 
         let bundle = Bundle(for: FeedObject.self)
 
-        guard let fileURL = bundle.url(forResource: "Feeds", withExtension: "plist") else {
+        guard let fileURL = bundle.url(forResource: "Feeds", withExtension: "json") else {
             assertionFailure("Can not find Feeds.plist in \(bundle)")
             return []
         }
 
-        guard let list = NSArray(contentsOf: fileURL) as? [String] else {
-            assertionFailure("Incorrect Feeds.plist format at \(fileURL)")
-            return []
+        do {
+            let data = try Data(contentsOf: fileURL)
+            let decoder = JSONDecoder()
+
+            return try decoder.decode([FeedDescription].self, from: data)
         }
-
-        guard !list.isEmpty else {
-            assertionFailure("Empty Feeds.plist at \(fileURL)")
+        catch {
+            assertionFailure("\(error)")
             return []
-        }
-
-        return list.compactMap { string in
-            guard let url = URL(string: string) else {
-                assertionFailure("\(string) is not a URL")
-                return nil
-            }
-
-            return url
         }
     }
 
