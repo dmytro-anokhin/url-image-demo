@@ -31,8 +31,6 @@
 		F4F10677260A2A0400EFCC82 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4F10679260A2A0400EFCC82 /* Localizable.strings */; };
 		F4F10686260A39AC00EFCC82 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F10685260A39AC00EFCC82 /* FeedParser.swift */; };
 		F4F10687260A39AC00EFCC82 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F10685260A39AC00EFCC82 /* FeedParser.swift */; };
-		F4F1069D260BAA4100EFCC82 /* reddit.photojournalism.atom.xml in Resources */ = {isa = PBXBuildFile; fileRef = F4F1069C260BAA4100EFCC82 /* reddit.photojournalism.atom.xml */; };
-		F4F1069E260BAA4100EFCC82 /* reddit.photojournalism.atom.xml in Resources */ = {isa = PBXBuildFile; fileRef = F4F1069C260BAA4100EFCC82 /* reddit.photojournalism.atom.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +51,6 @@
 		F4F10678260A2A0400EFCC82 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4F1067C260A2A0700EFCC82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4F10685260A39AC00EFCC82 /* FeedParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
-		F4F1069C260BAA4100EFCC82 /* reddit.photojournalism.atom.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = reddit.photojournalism.atom.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +102,6 @@
 				F4C6137225DC236600469676 /* Views */,
 				F4C6136525DBC64100469676 /* Model */,
 				F45307F525DB06CC0003D6C5 /* ImageOfTheDayApp.swift */,
-				F4F1069C260BAA4100EFCC82 /* reddit.photojournalism.atom.xml */,
 				F4F10679260A2A0400EFCC82 /* Localizable.strings */,
 				F45307F725DB06CE0003D6C5 /* Assets.xcassets */,
 			);
@@ -264,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F453080C25DB06CE0003D6C5 /* Assets.xcassets in Resources */,
-				F4F1069D260BAA4100EFCC82 /* reddit.photojournalism.atom.xml in Resources */,
 				F4F10676260A2A0400EFCC82 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +269,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F453080D25DB06CE0003D6C5 /* Assets.xcassets in Resources */,
-				F4F1069E260BAA4100EFCC82 /* reddit.photojournalism.atom.xml in Resources */,
 				F4F10677260A2A0400EFCC82 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
