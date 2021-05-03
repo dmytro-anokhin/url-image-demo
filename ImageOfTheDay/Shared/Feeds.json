@@ -1,13 +1,11 @@
 [
     {
+        "id" : 1,
         "name" : "500px",
         "url" : "https://iso.500px.com/feed/"
-    },
-    {
+    },{
+        "id" : 2,
         "name" : "NASA Image of the Day",
         "url" : "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss"
-    },{
-        "name" : "Reddit Photojournalism",
-        "url" : "https://www.reddit.com/r/photojournalism/.rss?format=xml"
     }
 ]

@@ -27,7 +27,7 @@ struct ImageOfTheDayApp: App {
         let urlImageService = URLImageService(fileStore: fileStore, inMemoryStore: inMemoryStore)
 
         return WindowGroup {
-            ContentView()
+            FeedListView()
                 .environment(\.urlImageService, urlImageService)
         }
     }
@@ -81,16 +81,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             // TODO: Cancel load
         }
 
-        FeedObject.shared.load { success in
-            guard success else {
-                task.setTaskCompleted(success: false)
-                return
-            }
-
-            FeedObject.shared.loadImages {
-                task.setTaskCompleted(success: $0)
-            }
-        }
+//        FeedObject.shared.load { success in
+//            guard success else {
+//                task.setTaskCompleted(success: false)
+//                return
+//            }
+//
+//            FeedObject.shared.loadImages {
+//                task.setTaskCompleted(success: $0)
+//            }
+//        }
      }
 }
 

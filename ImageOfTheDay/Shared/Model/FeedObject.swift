@@ -15,8 +15,6 @@ import URLImageStore
 
 final class FeedObject: ObservableObject {
 
-    static let shared = FeedObject(url: getFeeds()[0].url)
-
     /// Returns the list of feeds bundled with the app
     static func getFeeds() -> [FeedDescription] {
 
@@ -39,10 +37,10 @@ final class FeedObject: ObservableObject {
         }
     }
 
-    let url: URL
+    let feedDescription: FeedDescription
 
-    init(url: URL) {
-        self.url = url
+    init(feedDescription: FeedDescription) {
+        self.feedDescription = feedDescription
     }
 
     @Published private(set) var feed = Feed(items: [])
@@ -60,7 +58,7 @@ final class FeedObject: ObservableObject {
         }
 
         cancellable = URLSession.shared
-            .dataTaskPublisher(for: url)
+            .dataTaskPublisher(for: feedDescription.url)
             .mapError {
                 Error.network($0)
             }
