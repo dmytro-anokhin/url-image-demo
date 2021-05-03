@@ -16,12 +16,16 @@ struct FeedContainerView: View {
             .onAppear {
                 feedObject.load()
             }
-            .navigationBarTitle(feedObject.feedDescription.name, displayMode: .inline)
+            .navigationBarTitle(feedObject.feedDescription.name,
+                                displayMode: .inline)
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FeedContainerView(feedObject: FeedObject.shared)
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        let description = FeedDescription(id: 0,
+                                          name: "NASA Image of the Day",
+                                          url: URL(string: "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss")!)
+        return FeedContainerView(feedObject: FeedObject(feedDescription: description))
+    }
+}
