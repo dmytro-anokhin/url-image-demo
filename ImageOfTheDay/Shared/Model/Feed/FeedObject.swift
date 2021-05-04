@@ -15,28 +15,6 @@ import URLImageStore
 
 final class FeedObject: ObservableObject {
 
-    /// Returns the list of feeds bundled with the app
-    static func getFeeds() -> [FeedDescription] {
-
-        let bundle = Bundle(for: FeedObject.self)
-
-        guard let fileURL = bundle.url(forResource: "Feeds", withExtension: "json") else {
-            assertionFailure("Can not find Feeds.plist in \(bundle)")
-            return []
-        }
-
-        do {
-            let data = try Data(contentsOf: fileURL)
-            let decoder = JSONDecoder()
-
-            return try decoder.decode([FeedDescription].self, from: data)
-        }
-        catch {
-            assertionFailure("\(error)")
-            return []
-        }
-    }
-
     let feedDescription: FeedDescription
 
     init(feedDescription: FeedDescription) {

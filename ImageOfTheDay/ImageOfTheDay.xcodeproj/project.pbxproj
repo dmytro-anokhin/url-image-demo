@@ -27,6 +27,8 @@
 		F4A6B0D1263B3DA200E1CACE /* Feeds.json in Resources */ = {isa = PBXBuildFile; fileRef = F4A6B0CF263B3DA200E1CACE /* Feeds.json */; };
 		F4A6B0D3263D118B00E1CACE /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6B0D2263D118B00E1CACE /* FeedListView.swift */; };
 		F4A6B0D4263D118B00E1CACE /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6B0D2263D118B00E1CACE /* FeedListView.swift */; };
+		F4A6B0D82640FDFF00E1CACE /* FeedListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6B0D72640FDFF00E1CACE /* FeedListObject.swift */; };
+		F4A6B0D92640FDFF00E1CACE /* FeedListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6B0D72640FDFF00E1CACE /* FeedListObject.swift */; };
 		F4C6135F25DBC1CA00469676 /* FeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C6135E25DBC1CA00469676 /* FeedObject.swift */; };
 		F4C6136025DBC1CA00469676 /* FeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C6135E25DBC1CA00469676 /* FeedObject.swift */; };
 		F4C6137B25DC3E0100469676 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C6137A25DC3E0100469676 /* Item.swift */; };
@@ -53,6 +55,7 @@
 		F4A6B0CC263B3C9600E1CACE /* FeedDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDescription.swift; sourceTree = "<group>"; };
 		F4A6B0CF263B3DA200E1CACE /* Feeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Feeds.json; sourceTree = "<group>"; };
 		F4A6B0D2263D118B00E1CACE /* FeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListView.swift; sourceTree = "<group>"; };
+		F4A6B0D72640FDFF00E1CACE /* FeedListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListObject.swift; sourceTree = "<group>"; };
 		F4C6135925DBBCCC00469676 /* url-image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "url-image"; path = "../../url-image"; sourceTree = "<group>"; };
 		F4C6135E25DBC1CA00469676 /* FeedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedObject.swift; sourceTree = "<group>"; };
 		F4C6137A25DC3E0100469676 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -151,14 +154,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F4C6136525DBC64100469676 /* Model */ = {
+		F4A6B0D52640FDD300E1CACE /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				F4F10684260A387500EFCC82 /* Parser */,
 				F453081F25DB09CE0003D6C5 /* Feed.swift */,
 				F4C6135E25DBC1CA00469676 /* FeedObject.swift */,
 				F4A6B0CC263B3C9600E1CACE /* FeedDescription.swift */,
 				F4C6137A25DC3E0100469676 /* Item.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F4A6B0D62640FDEF00E1CACE /* FeedList */ = {
+			isa = PBXGroup;
+			children = (
+				F4A6B0D72640FDFF00E1CACE /* FeedListObject.swift */,
+			);
+			path = FeedList;
+			sourceTree = "<group>";
+		};
+		F4C6136525DBC64100469676 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4A6B0D62640FDEF00E1CACE /* FeedList */,
+				F4A6B0D52640FDD300E1CACE /* Feed */,
+				F4F10684260A387500EFCC82 /* Parser */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +319,7 @@
 				F4C6135F25DBC1CA00469676 /* FeedObject.swift in Sources */,
 				F4A6B0D3263D118B00E1CACE /* FeedListView.swift in Sources */,
 				F4A6B0CD263B3C9600E1CACE /* FeedDescription.swift in Sources */,
+				F4A6B0D82640FDFF00E1CACE /* FeedListObject.swift in Sources */,
 				F4F1066926040B1100EFCC82 /* ItemView.swift in Sources */,
 				F453080A25DB06CE0003D6C5 /* FeedContainerView.swift in Sources */,
 				F4C6137B25DC3E0100469676 /* Item.swift in Sources */,
@@ -316,6 +337,7 @@
 				F4C6136025DBC1CA00469676 /* FeedObject.swift in Sources */,
 				F4A6B0D4263D118B00E1CACE /* FeedListView.swift in Sources */,
 				F4A6B0CE263B3C9600E1CACE /* FeedDescription.swift in Sources */,
+				F4A6B0D92640FDFF00E1CACE /* FeedListObject.swift in Sources */,
 				F4F1066A26040B1100EFCC82 /* ItemView.swift in Sources */,
 				F453080B25DB06CE0003D6C5 /* FeedContainerView.swift in Sources */,
 				F4C6137C25DC3E0100469676 /* Item.swift in Sources */,

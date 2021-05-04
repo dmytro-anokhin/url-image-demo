@@ -14,6 +14,8 @@ import BackgroundTasks
 @main
 struct ImageOfTheDayApp: App {
 
+    @StateObject var feedList = FeedListObject()
+
 #if os(iOS)
 
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -27,7 +29,7 @@ struct ImageOfTheDayApp: App {
         let urlImageService = URLImageService(fileStore: fileStore, inMemoryStore: inMemoryStore)
 
         return WindowGroup {
-            FeedListView()
+            FeedListView(feedList: feedList)
                 .environment(\.urlImageService, urlImageService)
         }
     }

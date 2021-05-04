@@ -28,15 +28,15 @@ struct FeedView: View {
 }
 
 
-struct FeedView_Previews: PreviewProvider {
-
-    static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self) {
-            FeedView(feed: Feed.preview)
-                .preferredColorScheme($0)
-        }
-    }
-}
+//struct FeedView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        ForEach(ColorScheme.allCases, id: \.self) {
+//            FeedView(feed: Feed.preview)
+//                .preferredColorScheme($0)
+//        }
+//    }
+//}
 
 
 fileprivate extension Feed {

@@ -11,6 +11,10 @@ struct FeedContainerView: View {
 
     @ObservedObject var feedObject: FeedObject
 
+    init(feedList: FeedListObject, feedDescription: FeedDescription) {
+        feedObject = feedList.feedObject(for: feedDescription)
+    }
+
     var body: some View {
         FeedView(feed: feedObject.feed)
             .onAppear {
@@ -21,11 +25,11 @@ struct FeedContainerView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        let description = FeedDescription(id: 0,
-                                          name: "NASA Image of the Day",
-                                          url: URL(string: "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss")!)
-        return FeedContainerView(feedObject: FeedObject(feedDescription: description))
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let description = FeedDescription(id: 0,
+//                                          name: "NASA Image of the Day",
+//                                          url: URL(string: "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss")!)
+//        return FeedContainerView(feedObject: FeedObject(feedDescription: description))
+//    }
+//}

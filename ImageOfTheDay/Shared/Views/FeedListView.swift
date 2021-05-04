@@ -9,12 +9,12 @@ import SwiftUI
 
 struct FeedListView: View {
 
-    let feeds: [FeedDescription] = FeedObject.getFeeds()
+    let feedList: FeedListObject
 
     var body: some View {
         NavigationView {
-            List(feeds) { feedDescription in
-                NavigationLink(destination: FeedContainerView(feedObject: FeedObject(feedDescription: feedDescription))) {
+            List(feedList.feedDescriptions) { feedDescription in
+                NavigationLink(destination: FeedContainerView(feedList: feedList, feedDescription: feedDescription)) {
                     Text(feedDescription.name)
                 }
             }
@@ -25,6 +25,6 @@ struct FeedListView: View {
 
 struct FeedList_Previews: PreviewProvider {
     static var previews: some View {
-        FeedListView()
+        FeedListView(feedList: FeedListObject())
     }
 }
