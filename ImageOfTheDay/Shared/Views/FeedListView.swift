@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FeedListView: View {
 
-    let feedList: FeedListObject
+    @EnvironmentObject var feedList: FeedListObject
 
     var body: some View {
         NavigationView {
@@ -25,6 +25,7 @@ struct FeedListView: View {
 
 struct FeedList_Previews: PreviewProvider {
     static var previews: some View {
-        FeedListView(feedList: FeedListObject())
+        FeedListView()
+            .environmentObject(FeedListObject())
     }
 }

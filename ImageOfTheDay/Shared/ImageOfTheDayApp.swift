@@ -29,8 +29,9 @@ struct ImageOfTheDayApp: App {
         let urlImageService = URLImageService(fileStore: fileStore, inMemoryStore: inMemoryStore)
 
         return WindowGroup {
-            FeedListView(feedList: feedList)
+            FeedListView()
                 .environment(\.urlImageService, urlImageService)
+                .environmentObject(feedList)
         }
     }
 }
