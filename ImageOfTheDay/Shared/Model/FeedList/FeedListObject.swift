@@ -56,8 +56,8 @@ final class FeedListObject: ObservableObject {
         return newObject
     }
 
-    /// Update content of all feeds including images
-    func update(_ completion: ((_ success: Bool) -> Void)? = nil) {
+    /// Refresh content of all feeds including images
+    func refresh(_ completion: ((_ success: Bool) -> Void)? = nil) {
         // TODO: Implement
         completion?(true)
     }
