@@ -84,7 +84,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             // TODO: Cancel load
         }
 
-        FeedListObject.shared.update {
+        FeedListObject.shared.refresh {
             task.setTaskCompleted(success: $0)
         }
      }
