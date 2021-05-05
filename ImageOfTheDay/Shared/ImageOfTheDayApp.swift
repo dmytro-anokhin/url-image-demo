@@ -14,7 +14,7 @@ import BackgroundTasks
 @main
 struct ImageOfTheDayApp: App {
 
-    @StateObject var feedList = FeedListObject()
+    @StateObject var feedList: FeedListObject = .shared
 
 #if os(iOS)
 
@@ -84,16 +84,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             // TODO: Cancel load
         }
 
-//        FeedObject.shared.load { success in
-//            guard success else {
-//                task.setTaskCompleted(success: false)
-//                return
-//            }
-//
-//            FeedObject.shared.loadImages {
-//                task.setTaskCompleted(success: $0)
-//            }
-//        }
+        FeedListObject.shared.update {
+            task.setTaskCompleted(success: $0)
+        }
      }
 }
 

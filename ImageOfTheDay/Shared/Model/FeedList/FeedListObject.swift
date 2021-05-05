@@ -33,6 +33,11 @@ final class FeedListObject: ObservableObject {
         }
     }
 
+    /// Singleton for demo purposes.
+    ///
+    /// Shared object used to simulate background refresh. Because the app doesn't implement persistence in any form, background tasks can use shared property to update content. This is sufficient to test downloads without adding complexity unnecessary in a demo app.
+    static let shared = FeedListObject()
+
     let feedDescriptions: [FeedDescription]
     
     init() {
@@ -49,6 +54,12 @@ final class FeedListObject: ObservableObject {
         feeds[feedDescription] = newObject
 
         return newObject
+    }
+
+    /// Update content of all feeds including images
+    func update(_ completion: ((_ success: Bool) -> Void)? = nil) {
+        // TODO: Implement
+        completion?(true)
     }
 
     /// Map of feeds filled in lazily
