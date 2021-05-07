@@ -81,7 +81,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         scheduleAppRefresh()
 
         task.expirationHandler = {
-            // TODO: Cancel load
+            FeedListObject.shared.cancelRefresh()
         }
 
         FeedListObject.shared.refresh {

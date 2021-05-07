@@ -62,6 +62,10 @@ final class FeedListObject: ObservableObject {
         completion?(true)
     }
 
+    func cancelRefresh() {
+        // TODO: Implement
+    }
+
     /// Map of feeds filled in lazily
     private var feeds: [FeedDescription: FeedObject] = [:]
 }
