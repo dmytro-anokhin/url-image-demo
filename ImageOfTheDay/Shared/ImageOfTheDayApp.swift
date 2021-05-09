@@ -32,6 +32,9 @@ struct ImageOfTheDayApp: App {
             FeedListView()
                 .environment(\.urlImageService, urlImageService)
                 .environmentObject(feedList)
+                .environment(\.urlImageOptions, URLImageOptions(
+                    maxPixelSize: CGSize(width: 600.0, height: 600.0)
+                ))
         }
     }
 }
