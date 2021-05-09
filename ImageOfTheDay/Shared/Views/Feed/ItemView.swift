@@ -15,7 +15,7 @@ struct ItemView: View {
 
     var body: some View {
         Color("ItemViewBackground")
-            .frame(idealWidth: .infinity).frame(height: Geometry.height) // Stretch to fill parent by width, height is fixed
+            .frame(height: Geometry.height)
             .overlay(image)
             .clipped()
             .overlay(text, alignment: .bottomLeading)
