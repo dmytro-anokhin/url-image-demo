@@ -16,12 +16,19 @@ struct FeedContainerView: View {
     }
 
     var body: some View {
-        FeedView(feed: feedObject.feed)
-            .onAppear {
-                feedObject.load()
-            }
-            .navigationBarTitle(feedObject.feedDescription.name,
-                                displayMode: .inline)
+        #if os(iOS)
+            FeedView(feed: feedObject.feed)
+                .onAppear {
+                    feedObject.load()
+                }
+                .navigationBarTitle(feedObject.feedDescription.name, displayMode: .inline)
+        #else
+            FeedView(feed: feedObject.feed)
+                .onAppear {
+                    feedObject.load()
+                }
+                .navigationTitle(feedObject.feedDescription.name)
+        #endif
     }
 }
 
