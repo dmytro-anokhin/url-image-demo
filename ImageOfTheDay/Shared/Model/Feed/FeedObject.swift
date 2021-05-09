@@ -51,7 +51,7 @@ final class FeedObject: ObservableObject {
                         Error.parse($0)
                     }
             }
-            .receive(on: RunLoop.main)
+            .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] _ in
                     guard let self = self else {
