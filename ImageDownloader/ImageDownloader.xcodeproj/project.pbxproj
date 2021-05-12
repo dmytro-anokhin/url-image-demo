@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F46155C4264C45520019F1D9 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = F46155C3264C45520019F1D9 /* URLImageStore */; };
 		F4C1392F2613ACBA003B59E3 /* ImageDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1392E2613ACBA003B59E3 /* ImageDownloaderApp.swift */; };
 		F4C139312613ACBA003B59E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C139302613ACBA003B59E3 /* ContentView.swift */; };
 		F4C139332613ACBB003B59E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C139322613ACBB003B59E3 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46155C4264C45520019F1D9 /* URLImageStore in Frameworks */,
 				F4C139402613AF5F003B59E3 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,11 +37,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F46155C2264C45520019F1D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4C139222613ACBA003B59E3 = {
 			isa = PBXGroup;
 			children = (
 				F4C1392D2613ACBA003B59E3 /* ImageDownloader */,
 				F4C1392C2613ACBA003B59E3 /* Products */,
+				F46155C2264C45520019F1D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +99,7 @@
 			name = ImageDownloader;
 			packageProductDependencies = (
 				F4C1393F2613AF5F003B59E3 /* URLImage */,
+				F46155C3264C45520019F1D9 /* URLImageStore */,
 			);
 			productName = ImageDownloader;
 			productReference = F4C1392B2613ACBA003B59E3 /* ImageDownloader.app */;
@@ -343,12 +354,17 @@
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.3;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F46155C3264C45520019F1D9 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4C1393E2613AF5F003B59E3 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
 		F4C1393F2613AF5F003B59E3 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4C1393E2613AF5F003B59E3 /* XCRemoteSwiftPackageReference "url-image" */;

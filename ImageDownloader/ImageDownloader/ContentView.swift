@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 import UniformTypeIdentifiers
 import URLImage
+import URLImageStore
 
 
 /// Document used to export image as JPEG file using system dialog
@@ -48,10 +49,14 @@ fileprivate struct JPEGExportDocument: FileDocument {
     }
 }
 
+
 /// The `Model` object implements image load logic using `URLImage` service and manages `JPEGExportDocument` instance.
 ///
 /// `Model` class  conforms to `ObservableObject` protocol to notify observers when download completed and the document is ready for export.
 fileprivate final class Model: ObservableObject {
+
+    static let downloadService = URLImageService(fileStore: URLImageFileStore(),
+                                             inMemoryStore: nil)
 
     /// URL of the image to download
     let url: URL
@@ -71,22 +76,17 @@ fileprivate final class Model: ObservableObject {
             return
         }
 
-        cancellable = URLImageService.shared
-            .remoteImagePublisher(url, options: URLImageOptions(maxPixelSize: nil))
-            .tryMap {
-                $0.cgImage
-            }
-            .catch { _ in
-                Just(nil)
-            }
-            .sink { [weak self] image in
+        cancellable = Model.downloadService
+            .remoteImagePublisher(url, identifier: nil)
+            .sink { [weak self] result in
                 guard let self = self else {
                     return
                 }
 
-                if let image = image {
-                    self.document = JPEGExportDocument(cgImage: image)
-                }
+                self.cancellable = nil
+            }
+            receiveValue: { info in
+                self.document = JPEGExportDocument(cgImage: info.cgImage)
             }
     }
 
@@ -104,10 +104,12 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            URLImage(url: model.url) {
+            URLImage(model.url) {
                 $0.resizable()
                     .aspectRatio(contentMode: .fit)
             }
+            .environment(\.urlImageService, Model.downloadService) // Using same download service
+            .environment(\.urlImageOptions, URLImageOptions(loadOptions: [ .loadImmediately ])) // Set load immediately because the model will reload the view
             .onAppear {
                 model.load()
             }
