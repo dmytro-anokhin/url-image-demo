@@ -22,7 +22,7 @@ struct ContentView: View {
             LazyVStack {
                 ForEach(urls, id: \.self) { url in
                     VStack(alignment: .leading) {
-                        URLImage(url: url) {
+                        URLImage(url) {
                             $0
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)

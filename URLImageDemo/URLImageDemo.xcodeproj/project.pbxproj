@@ -16,6 +16,7 @@
 		F44BEDD6253E7B97008D8524 /* ListDemoPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDD5253E7B97008D8524 /* ListDemoPresentationView.swift */; };
 		F44BEDDA253EA78A008D8524 /* LazyVGridDemoPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDD9253EA78A008D8524 /* LazyVGridDemoPresentationView.swift */; };
 		F44BEDDE253ED8E4008D8524 /* LazyVStackPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BEDDD253ED8E4008D8524 /* LazyVStackPresentationView.swift */; };
+		F46155C1264B90240019F1D9 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = F46155C0264B90240019F1D9 /* URLImageStore */; };
 		F467DF3C25800CA700C62D72 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F467DF3B25800CA700C62D72 /* WidgetKit.framework */; };
 		F467DF3E25800CA700C62D72 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F467DF3D25800CA700C62D72 /* SwiftUI.framework */; };
 		F467DF4125800CA700C62D72 /* URLImageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467DF4025800CA700C62D72 /* URLImageWidget.swift */; };
@@ -161,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46155C1264B90240019F1D9 /* URLImageStore in Frameworks */,
 				F467DF3E25800CA700C62D72 /* SwiftUI.framework in Frameworks */,
 				F4C139172613A6EC003B59E3 /* URLImage in Frameworks */,
 				F467DF3C25800CA700C62D72 /* WidgetKit.framework in Frameworks */,
@@ -365,6 +367,7 @@
 			name = URLImageWidgetExtension;
 			packageProductDependencies = (
 				F4C139162613A6EC003B59E3 /* URLImage */,
+				F46155C0264B90240019F1D9 /* URLImageStore */,
 			);
 			productName = URLImageWidgetExtension;
 			productReference = F467DF3A25800CA700C62D72 /* URLImageWidgetExtension.appex */;
@@ -960,6 +963,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F46155C0264B90240019F1D9 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4C138FD2613A5A7003B59E3 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
 		F4C139102613A6D0003B59E3 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4C138FD2613A5A7003B59E3 /* XCRemoteSwiftPackageReference "url-image" */;

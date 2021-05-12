@@ -9,6 +9,7 @@ import WidgetKit
 import SwiftUI
 import Intents
 import URLImage
+import URLImageStore
 import Combine
 
 
@@ -16,7 +17,8 @@ class Loader {
 
     static let shared = Loader()
 
-    var remoteImage: RemoteImage?
+    static let service: URLImageService = URLImageService(fileStore: URLImageFileStore(),
+                                                          inMemoryStore: URLImageInMemoryStore())
 
     var entry: SimpleEntry? {
         didSet {
@@ -24,17 +26,12 @@ class Loader {
                 return
             }
 
-            remoteImage = URLImageService.shared.makeRemoteImage(url: entry.url)
-            cancellable = remoteImage?.$loadingState.sink { state in
-                switch state {
-                    case .initial, .inProgress, .failure:
-                        break
-                    case .success:
-                        WidgetCenter.shared.reloadAllTimelines()
-                }
-            }
+            let publisher = Loader.service.remoteImagePublisher(entry.url, identifier: nil)
 
-            remoteImage?.load()
+            cancellable = publisher.sink(receiveCompletion: { result in
+                WidgetCenter.shared.reloadAllTimelines()
+            }, receiveValue: { imageInfo in
+            })
         }
     }
 
@@ -63,9 +60,6 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-
-        print(URLImageService.shared.diskCacheURL.absoluteString)
-
         if let entry = Loader.shared.entry {
             let timeline = Timeline(entries: [ entry ], policy: .atEnd)
             completion(timeline)
@@ -93,11 +87,13 @@ struct URLImageWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        URLImage(url: entry.url, options: URLImageOptions(cachePolicy: .returnCacheDontLoad())) { image in
+        URLImage(entry.url) { image in
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
         }
+        .environment(\.urlImageOptions, URLImageOptions(fetchPolicy: .returnStoreDontLoad))
+        .environment(\.urlImageService, Loader.service)
     }
 }
 
