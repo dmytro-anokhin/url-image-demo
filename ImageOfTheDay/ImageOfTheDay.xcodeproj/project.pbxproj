@@ -56,7 +56,6 @@
 		F4A6B0CF263B3DA200E1CACE /* Feeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Feeds.json; sourceTree = "<group>"; };
 		F4A6B0D2263D118B00E1CACE /* FeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListView.swift; sourceTree = "<group>"; };
 		F4A6B0D72640FDFF00E1CACE /* FeedListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListObject.swift; sourceTree = "<group>"; };
-		F4C6135925DBBCCC00469676 /* url-image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "url-image"; path = "../../url-image"; sourceTree = "<group>"; };
 		F4C6135E25DBC1CA00469676 /* FeedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedObject.swift; sourceTree = "<group>"; };
 		F4C6137A25DC3E0100469676 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F4F1066826040B1100EFCC82 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
@@ -99,7 +98,6 @@
 		F45307EF25DB06CC0003D6C5 = {
 			isa = PBXGroup;
 			children = (
-				F4C6135925DBBCCC00469676 /* url-image */,
 				F45307F425DB06CC0003D6C5 /* Shared */,
 				F45307FE25DB06CE0003D6C5 /* iOS */,
 				F453080525DB06CE0003D6C5 /* macOS */,
@@ -602,8 +600,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
 			requirement = {
-				branch = version_3;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
